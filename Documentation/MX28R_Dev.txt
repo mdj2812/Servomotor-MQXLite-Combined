@@ -14,13 +14,13 @@ Module "MQX1"      (component MQXLite)
                 the state of the interrupts (disabled or enabled) depends on the interrupt-disabled state of the next task that 
                 MQX makes ready.
    - MQX1__int_enable -The function _int_enable() resets the processor priority to the hardware priority that corresponds to 
-                the active task¡¯s software priority.
+                the active task’s software priority.
    - MQX1__int_exception_isr -To provide support for exception handlers, applications can use this ISR to replace the default 
                 ISR. The ISR is specific to the PSP.   An application calls _int_install_exception_isr() to install 
                 _int_exception_isr().   The function _int_exception_isr() does the following:   If an exception occurs when a 
                 task is running and a task exception ISR exists, MQX runs the ISR;   If a task exception ISR does not exist, 
                 MQX aborts the task by calling _task_abort().   If an exception occurs when an ISR is running and an ISR 
-                exception ISR exists, MQX aborts the   running ISR and runs the ISR¡¯s exception ISR.   The function walks the 
+                exception ISR exists, MQX aborts the   running ISR and runs the ISR’s exception ISR.   The function walks the 
                 interrupt stack looking for information about the ISR or task that was   running before the exception occurred. 
                 If the function determines that the interrupt stack contains   incorrect information, it calls 
                 _mqx_fatal_error() with error code MQX_CORRUPT_INTERRUPT_STACK.
@@ -60,7 +60,7 @@ Module "MQX1"      (component MQXLite)
    - MQX1__klog_create_at -
    - MQX1__klog_get_interrupt_stack_usage -Gets the size of the interrupt stack and the total amount of it used.
    - MQX1__klog_get_task_stack_usage -Gets the size of the interrupt stack and the total amount of it used.   The amount used 
-                is a highwater mark¡ªthe highest amount of interrupt stack that the application has used   so far. It shows only 
+                is a highwater mark—the highest amount of interrupt stack that the application has used   so far. It shows only 
                 how much of the stack has been written to at this point. If the amount is 0, the interrupt   stack is not large 
                 enough.
    - MQX1__klog_control -Controls logging in kernel log.   The application must first create kernel log with _klog_create().   
@@ -114,7 +114,7 @@ Module "MQX1"      (component MQXLite)
    - MQX1__sched_yield -Puts the active task at the end of its ready queue. The function effectively performs a timeslice. If 
                 there are no other tasks in this ready queue, the task continues to be the active task.
    - MQX1__task_abort -Makes a task run its task exit handler and then destroys itself.
-   - MQX1__task_block -Blocks the active task. The function removes the active task from the task¡¯s ready queue and sets the 
+   - MQX1__task_block -Blocks the active task. The function removes the active task from the task’s ready queue and sets the 
                 BLOCKED bit in the STATE field of the task descriptor. The task does not run again until another task 
                 explicitly makes it ready with _task_ready().
    - MQX1__task_check_stack -Determines whether the stack for the active task is currently out of bounds.   The function 

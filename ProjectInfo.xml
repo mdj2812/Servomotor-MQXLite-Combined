@@ -35,195 +35,195 @@
     <FLASHsize>1M</FLASHsize>
   </PROCESSOR>
   <PATHS>
-    <LinkerCommandFile>C:\Users\user\workspace.kds\MX28R_Dev\Project_Settings\Linker_Files\ProcessorExpert.ld</LinkerCommandFile>
+    <LinkerCommandFile>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Project_Settings\Linker_Files\ProcessorExpert.ld</LinkerCommandFile>
     <IncludePaths>
-      <Path>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\include\</Path>
-      <Path>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\config\</Path>
-      <Path>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\kernel\</Path>
-      <Path>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\</Path>
-      <Path>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\core\M4\</Path>
-      <Path>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\compiler\cwgcc\</Path>
-      <Path>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\System\</Path>
-      <Path>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\</Path>
-      <Path>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\IO_Map\</Path>
-      <Path>E:\Freescale\KDS_v3\eclipse\ProcessorExpert\lib\Kinetis\pdd\inc\</Path>
-      <Path>C:\Users\user\workspace.kds\MX28R_Dev\Sources\</Path>
-      <Path>C:\Users\user\workspace.kds\MX28R_Dev\Generated_Code\</Path>
+      <Path>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\include\</Path>
+      <Path>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\config\</Path>
+      <Path>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\kernel\</Path>
+      <Path>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\</Path>
+      <Path>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\core\M4\</Path>
+      <Path>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\compiler\cwgcc\</Path>
+      <Path>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\System\</Path>
+      <Path>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\</Path>
+      <Path>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\IO_Map\</Path>
+      <Path>C:\Freescale\KDS_v3\eclipse\ProcessorExpert\lib\Kinetis\pdd\inc\</Path>
+      <Path>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Sources\</Path>
+      <Path>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Generated_Code\</Path>
     </IncludePaths>
     <SourceCodePaths>
-      <Path>C:\Users\user\workspace.kds\MX28R_Dev\Generated_Code\</Path>
-      <Path>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\config\</Path>
-      <Path>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\kernel\</Path>
-      <Path>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\</Path>
-      <Path>C:\Users\user\workspace.kds\MX28R_Dev\Project_Settings\Startup_Code\</Path>
-      <Path>C:\Users\user\workspace.kds\MX28R_Dev\Sources\</Path>
-      <Path>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\System\</Path>
-      <Path>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\core\M4\</Path>
+      <Path>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Generated_Code\</Path>
+      <Path>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\config\</Path>
+      <Path>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\kernel\</Path>
+      <Path>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\</Path>
+      <Path>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Project_Settings\Startup_Code\</Path>
+      <Path>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Sources\</Path>
+      <Path>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\System\</Path>
+      <Path>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\core\M4\</Path>
     </SourceCodePaths>
   </PATHS>
   <FILES>
     <GeneratedCs>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Generated_Code\ALIM_12V_RLY.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Generated_Code\Cpu.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Generated_Code\MQX1.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Generated_Code\MX28R_DE.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Generated_Code\MX28R_RE.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Generated_Code\MX28R_RS485.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Generated_Code\PE_LDD.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Generated_Code\Pins1.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Generated_Code\SystemTimer1.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\config\task_template_list.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\kernel\idletask.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\kernel\int.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\kernel\klog.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\kernel\lwevent.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\kernel\lwlog.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\kernel\lwmem.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\kernel\lwmsgq.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\kernel\lwsem.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\kernel\lwtimer.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\kernel\mqx_utils.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\kernel\mqxlite.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\kernel\mutex.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\kernel\qu_test.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\kernel\sched.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\kernel\task.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\kernel\time_ticks.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\cortex.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\int_gkis.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\int_inst.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\int_kisr.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\int_pvta.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\int_unx.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\int_vtab.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\int_xcpt.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\mem_zero.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\psp_iinit.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\psp_supp.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\psp_tiad.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\psp_tinm.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\psp_tipr.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\psp_tisu.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\sc_irdyq.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\stack_bu.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\stack_de.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\stack_st.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Project_Settings\Startup_Code\startup.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Sources\Events.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Sources\MX28R.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Sources\main.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Sources\mqx_tasks.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\System\CPU_Init.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\System\Peripherals_Init.c</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\System\Vectors.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Generated_Code\ALIM_12V_RLY.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Generated_Code\Cpu.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Generated_Code\MQX1.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Generated_Code\MX28R_DE.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Generated_Code\MX28R_RE.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Generated_Code\MX28R_RS485.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Generated_Code\PE_LDD.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Generated_Code\Pins1.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Generated_Code\SystemTimer1.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\config\task_template_list.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\kernel\idletask.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\kernel\int.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\kernel\klog.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\kernel\lwevent.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\kernel\lwlog.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\kernel\lwmem.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\kernel\lwmsgq.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\kernel\lwsem.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\kernel\lwtimer.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\kernel\mqx_utils.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\kernel\mqxlite.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\kernel\mutex.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\kernel\qu_test.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\kernel\sched.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\kernel\task.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\kernel\time_ticks.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\cortex.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\int_gkis.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\int_inst.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\int_kisr.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\int_pvta.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\int_unx.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\int_vtab.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\int_xcpt.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\mem_zero.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\psp_iinit.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\psp_supp.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\psp_tiad.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\psp_tinm.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\psp_tipr.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\psp_tisu.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\sc_irdyq.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\stack_bu.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\stack_de.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\stack_st.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Project_Settings\Startup_Code\startup.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Sources\Events.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Sources\MX28R.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Sources\main.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Sources\mqx_tasks.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\System\CPU_Init.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\System\Peripherals_Init.c</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\System\Vectors.c</PathName>
     </GeneratedCs>
     <GeneratedHs>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Generated_Code\ALIM_12V_RLY.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Generated_Code\CPU_Config.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Generated_Code\Cpu.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Generated_Code\IO_Map.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Generated_Code\Init_Config.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Generated_Code\MQX1.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Generated_Code\MX28R_DE.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Generated_Code\MX28R_RE.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Generated_Code\MX28R_RS485.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Generated_Code\PE_Const.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Generated_Code\PE_Error.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Generated_Code\PE_LDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Generated_Code\PE_Types.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Generated_Code\Pins1.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Generated_Code\SystemTimer1.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Generated_Code\Vectors_Config.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\config\task_template_list.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\config\user_config.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\include\klog.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\include\log.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\include\lwevent.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\include\lwevent_prv.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\include\lwlog.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\include\lwlog_prv.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\include\lwmem.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\include\lwmem_prv.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\include\lwmsgq.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\include\lwmsgq_prv.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\include\lwsem.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\include\lwsem_prv.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\include\lwtimer.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\include\lwtimer_prv.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\include\mqx_cnfg.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\include\mqx_cpudef.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\include\mqx_inc.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\include\mqx_macros.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\include\mqx_str.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\include\mqxlite.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\include\mqxlite_cnfg.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\include\mqxlite_prv.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\include\mutex.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\include\mutex_prv.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\include\queue.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\compiler\cwgcc\asm_mac.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\compiler\cwgcc\comp.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\cortex.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\kinetis.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\psp_comp.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\psp_cpu.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\psp_cpudef.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\psp_prv.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\psp_supp.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\psp_ticks.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\psplite.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\psptypes.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Sources\Events.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Sources\MX28R.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Sources\mqx_tasks.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\IO_Map\MK64F12.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\ADC_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\CAN_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\CMP_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\CMT_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\CRC_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\DAC_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\DMAMUX_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\DMA_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\ENET_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\EWM_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\FMC_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\FTFE_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\FTM_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\GPIO_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\I2C_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\LLWU_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\LPTMR_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\MCG_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\MCM_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\OSC_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\PDB_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\PDD_Types.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\PIT_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\PMC_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\PORT_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\RCM_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\RNGA_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\RTC_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\SAI_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\SCB_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\SDHC_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\SIM_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\SMC_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\SPI_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\SysTick_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\UART_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\USBDCD_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\USB_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\VREF_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\PDD\WDOG_PDD.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\System\CPU_Init.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\System\PDD_Includes.h</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\Static_Code\System\Peripherals_Init.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Generated_Code\ALIM_12V_RLY.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Generated_Code\CPU_Config.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Generated_Code\Cpu.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Generated_Code\IO_Map.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Generated_Code\Init_Config.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Generated_Code\MQX1.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Generated_Code\MX28R_DE.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Generated_Code\MX28R_RE.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Generated_Code\MX28R_RS485.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Generated_Code\PE_Const.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Generated_Code\PE_Error.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Generated_Code\PE_LDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Generated_Code\PE_Types.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Generated_Code\Pins1.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Generated_Code\SystemTimer1.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Generated_Code\Vectors_Config.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\config\task_template_list.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\config\user_config.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\include\klog.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\include\log.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\include\lwevent.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\include\lwevent_prv.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\include\lwlog.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\include\lwlog_prv.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\include\lwmem.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\include\lwmem_prv.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\include\lwmsgq.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\include\lwmsgq_prv.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\include\lwsem.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\include\lwsem_prv.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\include\lwtimer.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\include\lwtimer_prv.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\include\mqx_cnfg.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\include\mqx_cpudef.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\include\mqx_inc.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\include\mqx_macros.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\include\mqx_str.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\include\mqxlite.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\include\mqxlite_cnfg.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\include\mqxlite_prv.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\include\mutex.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\include\mutex_prv.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\include\queue.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\compiler\cwgcc\asm_mac.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\compiler\cwgcc\comp.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\cortex.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\kinetis.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\psp_comp.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\psp_cpu.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\psp_cpudef.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\psp_prv.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\psp_supp.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\psp_ticks.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\psplite.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\psptypes.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Sources\Events.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Sources\MX28R.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Sources\mqx_tasks.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\IO_Map\MK64F12.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\ADC_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\CAN_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\CMP_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\CMT_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\CRC_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\DAC_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\DMAMUX_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\DMA_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\ENET_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\EWM_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\FMC_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\FTFE_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\FTM_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\GPIO_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\I2C_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\LLWU_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\LPTMR_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\MCG_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\MCM_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\OSC_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\PDB_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\PDD_Types.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\PIT_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\PMC_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\PORT_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\RCM_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\RNGA_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\RTC_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\SAI_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\SCB_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\SDHC_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\SIM_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\SMC_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\SPI_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\SysTick_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\UART_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\USBDCD_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\USB_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\VREF_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\PDD\WDOG_PDD.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\System\CPU_Init.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\System\PDD_Includes.h</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\Static_Code\System\Peripherals_Init.h</PathName>
     </GeneratedHs>
     <GeneratedASMs>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\core\M4\boot.S</PathName>
-      <PathName>C:\Users\user\workspace.kds\MX28R_Dev\MQXLITE\psp\cortex_m\core\M4\dispatch.S</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\core\M4\boot.S</PathName>
+      <PathName>C:\Users\MA\EP Tender\Servomotor-MQXLite-Combined\MQXLITE\psp\cortex_m\core\M4\dispatch.S</PathName>
     </GeneratedASMs>
   </FILES>
   <OPTIONS>

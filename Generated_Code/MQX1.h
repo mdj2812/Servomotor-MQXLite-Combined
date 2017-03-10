@@ -6,7 +6,7 @@
 **     Version     : Component 01.110, Driver 01.00, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2017-03-08, 15:30, # CodeGen: 6
+**     Date/Time   : 2017-03-09, 16:00, # CodeGen: 19
 **     Abstract    :
 **         MQX Lite RTOS Adapter component.
 **     Settings    :
@@ -72,7 +72,7 @@
 
 
 /* Path to MQX Lite source files */
-#define MQX_PATH   "E:/Freescale/KDS_v3/eclipse/ProcessorExpert/lib/mqxlite/V1.1.1/"
+#define MQX_PATH   "C:/Freescale/KDS_v3/eclipse/ProcessorExpert/lib/mqxlite/V1.1.1/"
 
 void      SystemTimer1_OnCounterRestart(LDD_TUserData *UserDataPtr);
 uint32_t  SystemTimer1_GetTicsPerSecond(LDD_TDeviceData *DeviceDataPtr);

@@ -2,7 +2,7 @@ Generated_Code/Pins1.o: ../Generated_Code/Pins1.c \
  ../Generated_Code/Pins1.h ../Generated_Code/Init_Config.h \
  ../Generated_Code/PE_Types.h ../Generated_Code/CPU_Config.h \
  ../Generated_Code/IO_Map.h \
- C:/Users/user/workspace.kds/MX28R_Dev/Static_Code/IO_Map/MK64F12.h
+ C:/Users/MA/EP\ Tender/Servomotor-MQXLite-Combined/Static_Code/IO_Map/MK64F12.h
 
 ../Generated_Code/Pins1.h:
 
@@ -14,4 +14,4 @@ Generated_Code/Pins1.o: ../Generated_Code/Pins1.c \
 
 ../Generated_Code/IO_Map.h:
 
-C:/Users/user/workspace.kds/MX28R_Dev/Static_Code/IO_Map/MK64F12.h:
+C:/Users/MA/EP\ Tender/Servomotor-MQXLite-Combined/Static_Code/IO_Map/MK64F12.h:

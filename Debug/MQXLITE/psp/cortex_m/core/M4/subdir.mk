@@ -20,7 +20,7 @@ S_UPPER_DEPS += \
 MQXLITE/psp/cortex_m/core/M4/%.o: ../MQXLITE/psp/cortex_m/core/M4/%.S
 	@echo 'Building file: $<'
 	@echo 'Invoking: Cross ARM GNU Assembler'
-	arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -x assembler-with-cpp -I"C:/Users/user/workspace.kds/MX28R_Dev/MQXLITE/include" -I"C:/Users/user/workspace.kds/MX28R_Dev/MQXLITE/config" -I"C:/Users/user/workspace.kds/MX28R_Dev/MQXLITE/kernel" -I"C:/Users/user/workspace.kds/MX28R_Dev/MQXLITE/psp/cortex_m" -I"C:/Users/user/workspace.kds/MX28R_Dev/MQXLITE/psp/cortex_m/core/M4" -I"C:/Users/user/workspace.kds/MX28R_Dev/MQXLITE/psp/cortex_m/compiler/cwgcc" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -c -o "$@" "$<"
+	arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -x assembler-with-cpp -I"C:/Users/MA/EP Tender/Servomotor-MQXLite-Combined/MQXLITE/include" -I"C:/Users/MA/EP Tender/Servomotor-MQXLite-Combined/MQXLITE/config" -I"C:/Users/MA/EP Tender/Servomotor-MQXLite-Combined/MQXLITE/kernel" -I"C:/Users/MA/EP Tender/Servomotor-MQXLite-Combined/MQXLITE/psp/cortex_m" -I"C:/Users/MA/EP Tender/Servomotor-MQXLite-Combined/MQXLITE/psp/cortex_m/core/M4" -I"C:/Users/MA/EP Tender/Servomotor-MQXLite-Combined/MQXLITE/psp/cortex_m/compiler/cwgcc" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -c -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

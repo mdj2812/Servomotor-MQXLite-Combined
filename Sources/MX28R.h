@@ -25,17 +25,29 @@ LWEVENT_STRUCT lwevent_RS485;
 LWEVENT_STRUCT lwevent_setThrottle;
 uint8_t TxData[20];
 
+uint8_t response[20];
+
+uint8_t FinalThtl;
+int8_t thtlBuffer;
+
+void *lwsem_error_ptr;
+void *td_error_ptr;
+
 void thtlInit();
 
 void thtlGetChecksum(uint8_t* array);
 
 uint8_t thtlSetGoalPosition(uint16_t pos,LDD_TDeviceData *ptr);
 
-uint8_t MX28R_Write(uint8_t StartAddr, uint8_t Value[], uint8_t Length,LDD_TDeviceData *ptr);
+uint8_t MX28R_Read(uint8_t StartAddr, uint8_t Length, LDD_TDeviceData *ptr);
+
+uint8_t MX28R_Write(uint8_t StartAddr, uint8_t Value[], uint8_t Length, LDD_TDeviceData *ptr);
 
 void MX28R_set_task(uint32_t task_init_data);
 
 void MX28R_check_task(uint32_t task_init_data);
+
+void MX28R_calibration(void);
 
 void MX28R_OnCharRcv();
 

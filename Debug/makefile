@@ -57,7 +57,7 @@ all: MX28R_Dev.elf secondary-outputs
 MX28R_Dev.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: Cross ARM C++ Linker'
-	arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/user/workspace.kds/MX28R_Dev/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/user/workspace.kds/MX28R_Dev/Project_Settings/Linker_Files" -Wl,-Map,"MX28R_Dev.map" -specs=nano.specs -specs=nosys.specs -o "MX28R_Dev.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/MA/EP Tender/Servomotor-MQXLite-Combined/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/MA/EP Tender/Servomotor-MQXLite-Combined/Project_Settings/Linker_Files" -Wl,-Map,"MX28R_Dev.map" -specs=nano.specs -specs=nosys.specs -o "MX28R_Dev.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
