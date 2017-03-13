@@ -69,7 +69,25 @@ uint8_t MX28R_Write(uint8_t StartAddr, uint8_t Value[], uint8_t Length, LDD_TDev
   thtlGetChecksum(TxData);
   MX28R_DE_SetVal(MX28R_DE_Ptr);
   MX28R_RE_SetVal(MX28R_RE_Ptr);
-  return MX28R_RS485_SendBlock(ptr, TxData, Length + 7);
+  return MX28R_RS485_SendBlock(ptr, TxData, Length + 8);
+}
+
+uint8_t MX28R_check_moving(void) {
+	uint32_t result;
+	uint16_t speed;
+
+	do {
+		MX28R_Read(0x26, 2, MX28R_RS485_Ptr);
+		result = _lwevent_wait_ticks(&lwevent_setThrottle, 0x02, FALSE, 10);
+	} while(result == LWEVENT_WAIT_TIMEOUT);
+	_lwevent_clear(&lwevent_setThrottle, 0x02);
+
+	speed = (response[3]) | (response[4]<<8);
+	if(speed == 0) {
+		return 0;
+	} else {
+		return 1;
+	}
 }
 
 void MX28R_set_task(uint32_t task_init_data) {
@@ -111,7 +129,7 @@ void MX28R_set_task(uint32_t task_init_data) {
       }
       if (thtlNeedChange) {
         thtlNeedChange = FALSE;
-        thtlOrder = thtlBuffer ? 1808 + thtlBuffer * 432 / 100 : 1760;
+        thtlOrder = thtlBuffer ? P0 + thtlBuffer * (P100-P0) / 100 : P0;
         thtlSetGoalPosition(thtlOrder, MX28R_RS485_Ptr);
         _lwevent_wait_ticks(&lwevent_RS485, 0x02, FALSE, 50);
         _lwevent_clear(&lwevent_RS485, 0x02);
@@ -191,48 +209,108 @@ void MX28R_check_task(uint32_t task_init_data) {
 void MX28R_calibration(void) {
 	uint32_t result;
 	uint16_t PL, PP;
-	uint16_t table_PP_PL[20][2];
 	uint8_t i = 0;
-	uint16_t P0, P100;
+	uint8_t torqueLimit[]={(uint8_t)TORQUE_LIMIT, (uint8_t)(TORQUE_LIMIT>>8)};
 
-	uint8_t response_ok[] = {0x01, 0x02, 0x00, 0xFC};
-
-	thtlSetGoalPosition(0x6E0, MX28R_RS485_Ptr);
+	/* Set the Max Torque to the torqueLimit */
+	MX28R_Write(0x0E, torqueLimit, 2, MX28R_RS485_Ptr);
 	result = _lwevent_wait_ticks(&lwevent_setThrottle, 0x02, FALSE, 10);
 	_lwevent_clear(&lwevent_setThrottle, 0x02);
 
-	thtlSetGoalPosition(0x00, MX28R_RS485_Ptr);
+	/* Set the Torque Limit to the torqueLimit */
+	MX28R_Write(0x22, torqueLimit, 2, MX28R_RS485_Ptr);
 	result = _lwevent_wait_ticks(&lwevent_setThrottle, 0x02, FALSE, 10);
 	_lwevent_clear(&lwevent_setThrottle, 0x02);
 
-	 do{
+	/* Initialize the table */
+	for(i=0;i<40;i++) {
+		table_PP_PL[i][0] = 0;
+		table_PP_PL[i][1] = 0;
+	}
+	i = 0;
+
+	/* Set the position to END_POSITION */
+	thtlSetGoalPosition(END_POSITION, MX28R_RS485_Ptr);
+	result = _lwevent_wait_ticks(&lwevent_setThrottle, 0x02, FALSE, 10);
+	_lwevent_clear(&lwevent_setThrottle, 0x02);
+
+	/* Cycle till the end of the movement */
+	do{
+		/* During this move, get the present position and the load corresponding of each position and record them in a table */
 		do {
 		    MX28R_Read(0x28, 2, MX28R_RS485_Ptr);
 		    result = _lwevent_wait_ticks(&lwevent_setThrottle, 0x02, FALSE, 10);
-			_lwevent_clear(&lwevent_setThrottle, 0x02);
 		} while(result == LWEVENT_WAIT_TIMEOUT);
-		PL = response[3] + response[4]<<8;
+		_lwevent_clear(&lwevent_setThrottle, 0x02);
+
+		PL = (response[3]) | (response[4]<<8);
 
 		do {
 			MX28R_Read(0x24, 2, MX28R_RS485_Ptr);
 			result = _lwevent_wait_ticks(&lwevent_setThrottle, 0x02, FALSE, 10);
-			_lwevent_clear(&lwevent_setThrottle, 0x02);
 		} while(result == LWEVENT_WAIT_TIMEOUT);
 		_lwevent_clear(&lwevent_setThrottle, 0x02);
-		PP = response[3] + response[4]<<8;
 
-		if(i < 20)
+		PP = (response[3]) | (response[4]<<8);
+
+		if(i < 40)
 		{
 			table_PP_PL[i][0] = PP;
 			table_PP_PL[i][1] = PL;
 			i++;
 		}
-		_time_delay_ticks(1);
-	} while((PP>>8) == 0x00);
 
-	thtlSetGoalPosition(0x00FF, MX28R_RS485_Ptr);
-	_lwevent_wait_ticks(&lwevent_setThrottle, 0x02, FALSE, 0);
+		/* Wait 5 ticks = 25 Ms */
+		_time_delay_ticks(5);
+	} while(MX28R_check_moving());
+
+	/* Get the position of 100% */
+	P100 = table_PP_PL[i-1][0];
+
+	/* Initialize the table */
+	for(i=0;i<40;i++) {
+		table_PP_PL[i][0] = 0;
+		table_PP_PL[i][1] = 0;
+	}
+	i = 0;
+
+	/* Return the position to INITIAL_POSITION*/
+	thtlSetGoalPosition(INITIAL_POSITION, MX28R_RS485_Ptr);
+	result = _lwevent_wait_ticks(&lwevent_setThrottle, 0x02, FALSE, 10);
 	_lwevent_clear(&lwevent_setThrottle, 0x02);
+
+	/* Cycle till the end of the movement */
+	do{
+		/* During this move, get the present position and the load corresponding of each position and record them in a table */
+		do {
+		    MX28R_Read(0x28, 2, MX28R_RS485_Ptr);
+		    result = _lwevent_wait_ticks(&lwevent_setThrottle, 0x02, FALSE, 10);
+		} while(result == LWEVENT_WAIT_TIMEOUT);
+		_lwevent_clear(&lwevent_setThrottle, 0x02);
+
+		PL = (response[3]) | (response[4]<<8);
+
+		do {
+			MX28R_Read(0x24, 2, MX28R_RS485_Ptr);
+			result = _lwevent_wait_ticks(&lwevent_setThrottle, 0x02, FALSE, 10);
+		} while(result == LWEVENT_WAIT_TIMEOUT);
+		_lwevent_clear(&lwevent_setThrottle, 0x02);
+
+		PP = (response[3]) | (response[4]<<8);
+
+		if(i < 40)
+		{
+			table_PP_PL[i][0] = PP;
+			table_PP_PL[i][1] = PL;
+			i++;
+		}
+
+		/* Wait 5 ticks = 25 Ms */
+		_time_delay_ticks(5);
+	} while(MX28R_check_moving());
+
+	/* Get the position of 0% */
+	P0 = table_PP_PL[i-1][0];
 }
 
 void MX28R_OnCharRcv() {

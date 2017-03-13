@@ -3,7 +3,7 @@
   <Header>
     <Name>MX28R_Dev</Name>
     <SavedBy>hanch_000</SavedBy>
-    <ModificationStamp>18</ModificationStamp>
+    <ModificationStamp>20</ModificationStamp>
     <Date>2017-03-08</Date>
     <IDE>Eclipse IDE</IDE>
     <PEversion>1.12.2.RT7_b1550-0615</PEversion>
@@ -29,7 +29,7 @@
     <UseExistingModules>true</UseExistingModules>
     <RenamePeripheries>false</RenamePeripheries>
     <Autodependency>true</Autodependency>
-    <ProjectCompNumb>17</ProjectCompNumb>
+    <ProjectCompNumb>18</ProjectCompNumb>
     <DelUnusedPreviouslyGenFiles>true</DelUnusedPreviouslyGenFiles>
     <GeneratedCodeFrozen>false</GeneratedCodeFrozen>
     <AssignInitComponentNameToPrph>true</AssignInitComponentNameToPrph>
@@ -21676,7 +21676,7 @@
           <ComponentUUID>com.freescale.processorexpert.mqxlite_task</ComponentUUID>
           <BeanType>MQXLite_task</BeanType>
           <Name>Task3</Name>
-          <CompNumb>16</CompNumb>
+          <CompNumb>17</CompNumb>
           <CompEnabled>true</CompEnabled>
           <GenCodeMode>ALWAYS_WRITE</GenCodeMode>
           <IconName>OS_LDD</IconName>

@@ -12,6 +12,13 @@
 #define THTL_REQUEST_NUMBER_TO_EXECUTE  10
 #define THTL_ADD_STEP                   2
 
+// Torque limit of the motor
+#define TORQUE_LIMIT 		(uint16_t)(0x0100)
+
+// Positions
+#define INITIAL_POSITION	(uint16_t)(0x0000)
+#define END_POSITION		(uint16_t)(0x0800)
+
 #include "Cpu.h"
 #include "Events.h"
 #include "mqx_tasks.h"
@@ -26,6 +33,11 @@ LWEVENT_STRUCT lwevent_setThrottle;
 uint8_t TxData[20];
 
 uint8_t response[20];
+
+/** 0% and 100% positions */
+uint16_t P0, P100;
+/** table to record the load of the corresponding position */
+uint16_t table_PP_PL[40][2];
 
 uint8_t FinalThtl;
 int8_t thtlBuffer;
@@ -42,6 +54,8 @@ uint8_t thtlSetGoalPosition(uint16_t pos,LDD_TDeviceData *ptr);
 uint8_t MX28R_Read(uint8_t StartAddr, uint8_t Length, LDD_TDeviceData *ptr);
 
 uint8_t MX28R_Write(uint8_t StartAddr, uint8_t Value[], uint8_t Length, LDD_TDeviceData *ptr);
+
+uint8_t MX28R_check_moving(void);
 
 void MX28R_set_task(uint32_t task_init_data);
 

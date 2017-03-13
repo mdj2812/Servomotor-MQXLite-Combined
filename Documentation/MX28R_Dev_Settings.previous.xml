@@ -249,7 +249,7 @@
           <event name="OnChannel7" v="don&amp;apos;t generate code" />
         </Events>
       </inhrbean>
-      <list name="Task Template List" v="2">
+      <list name="Task Template List" v="3">
         <boolgroup name="Task1" v="Enabled">
           <inhrbean type="MQXLite_task">
             <Enabled v="Y" />
@@ -258,7 +258,7 @@
               <Name v="Task1" />
               <Entry_point_function v="Task1_task" />
               <Stack_size v="512" />
-              <Priority v="9" />
+              <Priority v="8" />
               <Creation_parameter v="0" />
               <group name="Attributes">
                 <MQX_AUTO_START_TASK v="Enabled" />
@@ -284,7 +284,7 @@
               <Name v="Task2" />
               <Entry_point_function v="Task2_task" />
               <Stack_size v="512" />
-              <Priority v="8" />
+              <Priority v="9" />
               <Creation_parameter v="0" />
               <group name="Attributes">
                 <MQX_AUTO_START_TASK v="Enabled" />
@@ -298,6 +298,32 @@
               <Event_module_name v="mqx_tasks" />
               <event name="OnTask" v="generate code">
                 <Event_procedure_name v="Task2_task" />
+              </event>
+            </Events>
+          </inhrbean>
+        </boolgroup>
+        <boolgroup name="Task3" v="Enabled">
+          <inhrbean type="MQXLite_task">
+            <Enabled v="Y" />
+            <Template v="Task" />
+            <Properties>
+              <Name v="Task3" />
+              <Entry_point_function v="Task3_task" />
+              <Stack_size v="512" />
+              <Priority v="8" />
+              <Creation_parameter v="0" />
+              <group name="Attributes">
+                <MQX_AUTO_START_TASK v="Enabled" />
+                <MQX_FLOATING_POINT_TASK v="Disabled" />
+              </group>
+            </Properties>
+            <Methods>
+              <EmptySection_DummyValue />
+            </Methods>
+            <Events>
+              <Event_module_name v="mqx_tasks" />
+              <event name="OnTask" v="generate code">
+                <Event_procedure_name v="Task3_task" />
               </event>
             </Events>
           </inhrbean>
