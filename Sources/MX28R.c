@@ -208,9 +208,19 @@ void MX28R_check_task(uint32_t task_init_data) {
 
 void MX28R_calibration(void) {
 	uint32_t result;
-	uint16_t PL, PP;
-	uint8_t i = 0;
+	uint16_t PP;
+	//uint16_t PL;
+	//uint8_t i = 0;
+	/** table to record the load of the corresponding position */
+	//uint16_t table_PP_PL[40][2];
 	uint8_t torqueLimit[]={(uint8_t)TORQUE_LIMIT, (uint8_t)(TORQUE_LIMIT>>8)};
+
+	/* During this move, get the present position and the load corresponding of each position and record them in a table */
+	do {
+	    MX28R_Read(0x06, 4, MX28R_RS485_Ptr);
+	    result = _lwevent_wait_ticks(&lwevent_setThrottle, 0x02, FALSE, 10);
+	} while(result == LWEVENT_WAIT_TIMEOUT);
+	_lwevent_clear(&lwevent_setThrottle, 0x02);
 
 	/* Set the Max Torque to the torqueLimit */
 	MX28R_Write(0x0E, torqueLimit, 2, MX28R_RS485_Ptr);
@@ -223,11 +233,11 @@ void MX28R_calibration(void) {
 	_lwevent_clear(&lwevent_setThrottle, 0x02);
 
 	/* Initialize the table */
-	for(i=0;i<40;i++) {
-		table_PP_PL[i][0] = 0;
-		table_PP_PL[i][1] = 0;
-	}
-	i = 0;
+	//for(i=0;i<40;i++) {
+	//	table_PP_PL[i][0] = 0;
+	//	table_PP_PL[i][1] = 0;
+	//}
+	//i = 0;
 
 	/* Set the position to END_POSITION */
 	thtlSetGoalPosition(END_POSITION, MX28R_RS485_Ptr);
@@ -237,13 +247,13 @@ void MX28R_calibration(void) {
 	/* Cycle till the end of the movement */
 	do{
 		/* During this move, get the present position and the load corresponding of each position and record them in a table */
-		do {
-		    MX28R_Read(0x28, 2, MX28R_RS485_Ptr);
-		    result = _lwevent_wait_ticks(&lwevent_setThrottle, 0x02, FALSE, 10);
-		} while(result == LWEVENT_WAIT_TIMEOUT);
-		_lwevent_clear(&lwevent_setThrottle, 0x02);
+		//do {
+		//    MX28R_Read(0x28, 2, MX28R_RS485_Ptr);
+		//    result = _lwevent_wait_ticks(&lwevent_setThrottle, 0x02, FALSE, 10);
+		//} while(result == LWEVENT_WAIT_TIMEOUT);
+		//_lwevent_clear(&lwevent_setThrottle, 0x02);
 
-		PL = (response[3]) | (response[4]<<8);
+		//PL = (response[3]) | (response[4]<<8);
 
 		do {
 			MX28R_Read(0x24, 2, MX28R_RS485_Ptr);
@@ -253,26 +263,27 @@ void MX28R_calibration(void) {
 
 		PP = (response[3]) | (response[4]<<8);
 
-		if(i < 40)
-		{
-			table_PP_PL[i][0] = PP;
-			table_PP_PL[i][1] = PL;
-			i++;
-		}
+		//if(i < 40)
+		//{
+		//	table_PP_PL[i][0] = PP;
+		//	table_PP_PL[i][1] = PL;
+		//	i++;
+		//}
 
 		/* Wait 5 ticks = 25 Ms */
 		_time_delay_ticks(5);
 	} while(MX28R_check_moving());
 
 	/* Get the position of 100% */
-	P100 = table_PP_PL[i-1][0];
+	//P100 = table_PP_PL[i-1][0];
+	P100 = PP;
 
 	/* Initialize the table */
-	for(i=0;i<40;i++) {
-		table_PP_PL[i][0] = 0;
-		table_PP_PL[i][1] = 0;
-	}
-	i = 0;
+	//for(i=0;i<40;i++) {
+	//	table_PP_PL[i][0] = 0;
+	//	table_PP_PL[i][1] = 0;
+	//}
+	//i = 0;
 
 	/* Return the position to INITIAL_POSITION*/
 	thtlSetGoalPosition(INITIAL_POSITION, MX28R_RS485_Ptr);
@@ -282,13 +293,13 @@ void MX28R_calibration(void) {
 	/* Cycle till the end of the movement */
 	do{
 		/* During this move, get the present position and the load corresponding of each position and record them in a table */
-		do {
-		    MX28R_Read(0x28, 2, MX28R_RS485_Ptr);
-		    result = _lwevent_wait_ticks(&lwevent_setThrottle, 0x02, FALSE, 10);
-		} while(result == LWEVENT_WAIT_TIMEOUT);
-		_lwevent_clear(&lwevent_setThrottle, 0x02);
+		//do {
+		//    MX28R_Read(0x28, 2, MX28R_RS485_Ptr);
+		//    result = _lwevent_wait_ticks(&lwevent_setThrottle, 0x02, FALSE, 10);
+		//} while(result == LWEVENT_WAIT_TIMEOUT);
+		//_lwevent_clear(&lwevent_setThrottle, 0x02);
 
-		PL = (response[3]) | (response[4]<<8);
+		//PL = (response[3]) | (response[4]<<8);
 
 		do {
 			MX28R_Read(0x24, 2, MX28R_RS485_Ptr);
@@ -298,19 +309,20 @@ void MX28R_calibration(void) {
 
 		PP = (response[3]) | (response[4]<<8);
 
-		if(i < 40)
-		{
-			table_PP_PL[i][0] = PP;
-			table_PP_PL[i][1] = PL;
-			i++;
-		}
+		//if(i < 40)
+		//{
+		//	table_PP_PL[i][0] = PP;
+		//	table_PP_PL[i][1] = PL;
+		//	i++;
+		//}
 
 		/* Wait 5 ticks = 25 Ms */
 		_time_delay_ticks(5);
 	} while(MX28R_check_moving());
 
 	/* Get the position of 0% */
-	P0 = table_PP_PL[i-1][0];
+	//P0 = table_PP_PL[i-1][0];
+	P0 = PP;
 }
 
 void MX28R_OnCharRcv() {

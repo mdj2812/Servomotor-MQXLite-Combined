@@ -32,12 +32,10 @@ LWEVENT_STRUCT lwevent_RS485;
 LWEVENT_STRUCT lwevent_setThrottle;
 uint8_t TxData[20];
 
-uint8_t response[20];
+uint8_t response[128];
 
 /** 0% and 100% positions */
 uint16_t P0, P100;
-/** table to record the load of the corresponding position */
-uint16_t table_PP_PL[40][2];
 
 uint8_t FinalThtl;
 int8_t thtlBuffer;
