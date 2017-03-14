@@ -86,7 +86,7 @@ Common symbol       size              file
 
 _mqx_zero_tick_struct
                     0xc               ./MQXLITE/kernel/mqxlite.o
-response            0x80              ./Sources/Events.o
+response            0xff              ./Sources/Events.o
 _mqx_system_stack   0x4               ./MQXLITE/kernel/mqxlite.o
 lwevent_RS485       0x24              ./Sources/Events.o
 errno               0x4               c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-reent.o)
@@ -680,7 +680,7 @@ Discarded input sections
  .data          0x00000000        0x0 ./Sources/MX28R.o
  .bss           0x00000000        0x0 ./Sources/MX28R.o
  .debug_macro   0x00000000      0x850 ./Sources/MX28R.o
- .debug_macro   0x00000000       0x28 ./Sources/MX28R.o
+ .debug_macro   0x00000000       0x34 ./Sources/MX28R.o
  .debug_macro   0x00000000       0x16 ./Sources/MX28R.o
  .debug_macro   0x00000000       0x44 ./Sources/MX28R.o
  .debug_macro   0x00000000      0x209 ./Sources/MX28R.o
@@ -1057,7 +1057,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x66f ./Sources/mqx_tasks.o
  .debug_macro   0x00000000       0x7b ./Sources/mqx_tasks.o
  .debug_macro   0x00000000      0x182 ./Sources/mqx_tasks.o
- .debug_macro   0x00000000       0x28 ./Sources/mqx_tasks.o
+ .debug_macro   0x00000000       0x34 ./Sources/mqx_tasks.o
  .group         0x00000000        0x8 ./Project_Settings/Startup_Code/startup.o
  .group         0x00000000        0x8 ./Project_Settings/Startup_Code/startup.o
  .group         0x00000000        0x8 ./Project_Settings/Startup_Code/startup.o
@@ -5632,7 +5632,7 @@ LOAD c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/f
                 0x00000400                _cfm
                 0x00000410                . = ALIGN (0x4)
 
-.text           0x00000410     0x3ee8
+.text           0x00000410     0x3ecc
                 0x00000410                . = ALIGN (0x4)
  *(.text)
  .text          0x00000410       0x54 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtbegin.o
@@ -5685,442 +5685,445 @@ LOAD c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/f
  .text.MX28R_Write
                 0x00000df0       0xa8 ./Sources/MX28R.o
                 0x00000df0                MX28R_Write
- .text.MX28R_check_moving
+ .text.MX28_read_byte
                 0x00000e98       0x68 ./Sources/MX28R.o
-                0x00000e98                MX28R_check_moving
- .text.MX28R_set_task
-                0x00000f00      0x15c ./Sources/MX28R.o
-                0x00000f00                MX28R_set_task
- .text.MX28R_check_task
-                0x0000105c      0x130 ./Sources/MX28R.o
-                0x0000105c                MX28R_check_task
+                0x00000e98                MX28_read_byte
+ .text.MX28R_check_moving
+                0x00000f00       0x2c ./Sources/MX28R.o
+                0x00000f00                MX28R_check_moving
  .text.MX28R_calibration
-                0x0000118c      0x194 ./Sources/MX28R.o
-                0x0000118c                MX28R_calibration
+                0x00000f2c      0x14c ./Sources/MX28R.o
+                0x00000f2c                MX28R_calibration
+ .text.MX28R_set_task
+                0x00001078      0x15c ./Sources/MX28R.o
+                0x00001078                MX28R_set_task
+ .text.MX28R_check_task
+                0x000011d4      0x130 ./Sources/MX28R.o
+                0x000011d4                MX28R_check_task
  .text.MX28R_OnCharRcv
-                0x00001320       0x14 ./Sources/MX28R.o
-                0x00001320                MX28R_OnCharRcv
+                0x00001304       0x14 ./Sources/MX28R.o
+                0x00001304                MX28R_OnCharRcv
  .text.MX28R_OnCmdTxComplete
-                0x00001334       0x30 ./Sources/MX28R.o
-                0x00001334                MX28R_OnCmdTxComplete
- .text.main     0x00001364       0x10 ./Sources/main.o
-                0x00001364                main
+                0x00001318       0x30 ./Sources/MX28R.o
+                0x00001318                MX28R_OnCmdTxComplete
+ .text.main     0x00001348       0x10 ./Sources/main.o
+                0x00001348                main
  .text.Task1_task
-                0x00001374       0x14 ./Sources/mqx_tasks.o
-                0x00001374                Task1_task
+                0x00001358       0x14 ./Sources/mqx_tasks.o
+                0x00001358                Task1_task
  .text.Task2_task
-                0x00001388       0x14 ./Sources/mqx_tasks.o
-                0x00001388                Task2_task
+                0x0000136c       0x14 ./Sources/mqx_tasks.o
+                0x0000136c                Task2_task
  .text.__copy_rom_section
-                0x0000139c       0xe4 ./Project_Settings/Startup_Code/startup.o
-                0x0000139c                __copy_rom_section
+                0x00001380       0xe4 ./Project_Settings/Startup_Code/startup.o
+                0x00001380                __copy_rom_section
  .text.__copy_rom_sections_to_ram
-                0x00001480       0x9c ./Project_Settings/Startup_Code/startup.o
-                0x00001480                __copy_rom_sections_to_ram
+                0x00001464       0x9c ./Project_Settings/Startup_Code/startup.o
+                0x00001464                __copy_rom_sections_to_ram
  .text.__init_registers
-                0x0000151c       0x20 ./Project_Settings/Startup_Code/startup.o
-                0x0000151c                __init_registers
+                0x00001500       0x20 ./Project_Settings/Startup_Code/startup.o
+                0x00001500                __init_registers
  .text.__init_user
-                0x0000153c        0xc ./Project_Settings/Startup_Code/startup.o
-                0x0000153c                __init_user
+                0x00001520        0xc ./Project_Settings/Startup_Code/startup.o
+                0x00001520                __init_user
  .text.__thumb_startup
-                0x00001548       0x34 ./Project_Settings/Startup_Code/startup.o
-                0x00001548                __thumb_startup
+                0x0000152c       0x34 ./Project_Settings/Startup_Code/startup.o
+                0x0000152c                __thumb_startup
  .text._psp_int_install
-                0x0000157c       0x20 ./MQXLITE/psp/cortex_m/int_inst.o
-                0x0000157c                _psp_int_install
+                0x00001560       0x20 ./MQXLITE/psp/cortex_m/int_inst.o
+                0x00001560                _psp_int_install
  .text._int_set_vector_table
-                0x0000159c       0x34 ./MQXLITE/psp/cortex_m/int_vtab.o
-                0x0000159c                _int_set_vector_table
+                0x00001580       0x34 ./MQXLITE/psp/cortex_m/int_vtab.o
+                0x00001580                _int_set_vector_table
  .text._mem_zero
-                0x000015d0      0x1c8 ./MQXLITE/psp/cortex_m/mem_zero.o
-                0x000015d0                _mem_zero
+                0x000015b4      0x1c8 ./MQXLITE/psp/cortex_m/mem_zero.o
+                0x000015b4                _mem_zero
  .text._psp_int_init
-                0x00001798       0x28 ./MQXLITE/psp/cortex_m/psp_iinit.o
-                0x00001798                _psp_int_init
+                0x0000177c       0x28 ./MQXLITE/psp/cortex_m/psp_iinit.o
+                0x0000177c                _psp_int_init
  .text._psp_add_ticks
-                0x000017c0       0x68 ./MQXLITE/psp/cortex_m/psp_tiad.o
-                0x000017c0                _psp_add_ticks
+                0x000017a4       0x68 ./MQXLITE/psp/cortex_m/psp_tiad.o
+                0x000017a4                _psp_add_ticks
  .text._psp_normalize_ticks
-                0x00001828       0x58 ./MQXLITE/psp/cortex_m/psp_tinm.o
-                0x00001828                _psp_normalize_ticks
+                0x0000180c       0x58 ./MQXLITE/psp/cortex_m/psp_tinm.o
+                0x0000180c                _psp_normalize_ticks
  .text._psp_set_kernel_disable_level
-                0x00001880       0xa8 ./MQXLITE/psp/cortex_m/sc_irdyq.o
-                0x00001880                _psp_set_kernel_disable_level
+                0x00001864       0xa8 ./MQXLITE/psp/cortex_m/sc_irdyq.o
+                0x00001864                _psp_set_kernel_disable_level
  .text._psp_init_readyqs
-                0x00001928       0xa8 ./MQXLITE/psp/cortex_m/sc_irdyq.o
-                0x00001928                _psp_init_readyqs
+                0x0000190c       0xa8 ./MQXLITE/psp/cortex_m/sc_irdyq.o
+                0x0000190c                _psp_init_readyqs
  .text._psp_build_stack_frame
-                0x000019d0       0x90 ./MQXLITE/psp/cortex_m/stack_bu.o
-                0x000019d0                _psp_build_stack_frame
+                0x000019b4       0x90 ./MQXLITE/psp/cortex_m/stack_bu.o
+                0x000019b4                _psp_build_stack_frame
  .text._psp_destroy_stack_frame
-                0x00001a60       0x14 ./MQXLITE/psp/cortex_m/stack_de.o
-                0x00001a60                _psp_destroy_stack_frame
+                0x00001a44       0x14 ./MQXLITE/psp/cortex_m/stack_de.o
+                0x00001a44                _psp_destroy_stack_frame
  .text._mqx_idle_task
-                0x00001a74       0x14 ./MQXLITE/kernel/idletask.o
-                0x00001a74                _mqx_idle_task
+                0x00001a58       0x14 ./MQXLITE/kernel/idletask.o
+                0x00001a58                _mqx_idle_task
  .text._int_default_isr
-                0x00001a88       0x5c ./MQXLITE/kernel/int.o
-                0x00001a88                _int_default_isr
+                0x00001a6c       0x5c ./MQXLITE/kernel/int.o
+                0x00001a6c                _int_default_isr
  .text._int_disable
-                0x00001ae4       0x38 ./MQXLITE/kernel/int.o
-                0x00001ae4                _int_disable
+                0x00001ac8       0x38 ./MQXLITE/kernel/int.o
+                0x00001ac8                _int_disable
  .text._int_enable
-                0x00001b1c       0x50 ./MQXLITE/kernel/int.o
-                0x00001b1c                _int_enable
+                0x00001b00       0x50 ./MQXLITE/kernel/int.o
+                0x00001b00                _int_enable
  .text._int_get_isr_data
-                0x00001b6c       0x68 ./MQXLITE/kernel/int.o
-                0x00001b6c                _int_get_isr_data
+                0x00001b50       0x68 ./MQXLITE/kernel/int.o
+                0x00001b50                _int_get_isr_data
  .text._int_install_isr
-                0x00001bd4       0x84 ./MQXLITE/kernel/int.o
-                0x00001bd4                _int_install_isr
+                0x00001bb8       0x84 ./MQXLITE/kernel/int.o
+                0x00001bb8                _int_install_isr
  .text._int_init
-                0x00001c58       0x8c ./MQXLITE/kernel/int.o
-                0x00001c58                _int_init
+                0x00001c3c       0x8c ./MQXLITE/kernel/int.o
+                0x00001c3c                _int_init
  .text._lwevent_create_internal
-                0x00001ce4      0x124 ./MQXLITE/kernel/lwevent.o
-                0x00001ce4                _lwevent_create_internal
+                0x00001cc8      0x124 ./MQXLITE/kernel/lwevent.o
+                0x00001cc8                _lwevent_create_internal
  .text._lwevent_create
-                0x00001e08       0x20 ./MQXLITE/kernel/lwevent.o
-                0x00001e08                _lwevent_create
+                0x00001dec       0x20 ./MQXLITE/kernel/lwevent.o
+                0x00001dec                _lwevent_create
  .text._lwevent_clear
-                0x00001e28       0x94 ./MQXLITE/kernel/lwevent.o
-                0x00001e28                _lwevent_clear
+                0x00001e0c       0x94 ./MQXLITE/kernel/lwevent.o
+                0x00001e0c                _lwevent_clear
  .text._lwevent_set
-                0x00001ebc      0x1d4 ./MQXLITE/kernel/lwevent.o
-                0x00001ebc                _lwevent_set
+                0x00001ea0      0x1d4 ./MQXLITE/kernel/lwevent.o
+                0x00001ea0                _lwevent_set
  .text._lwevent_wait_internal
-                0x00002090      0x1d4 ./MQXLITE/kernel/lwevent.o
-                0x00002090                _lwevent_wait_internal
+                0x00002074      0x1d4 ./MQXLITE/kernel/lwevent.o
+                0x00002074                _lwevent_wait_internal
  .text._lwevent_wait_ticks
-                0x00002264       0x74 ./MQXLITE/kernel/lwevent.o
-                0x00002264                _lwevent_wait_ticks
+                0x00002248       0x74 ./MQXLITE/kernel/lwevent.o
+                0x00002248                _lwevent_wait_ticks
  .text._lwsem_create_internal
-                0x000022d8       0xc8 ./MQXLITE/kernel/lwsem.o
-                0x000022d8                _lwsem_create_internal
+                0x000022bc       0xc8 ./MQXLITE/kernel/lwsem.o
+                0x000022bc                _lwsem_create_internal
  .text._lwsem_create
-                0x000023a0       0x20 ./MQXLITE/kernel/lwsem.o
-                0x000023a0                _lwsem_create
+                0x00002384       0x20 ./MQXLITE/kernel/lwsem.o
+                0x00002384                _lwsem_create
  .text._lwsem_post
-                0x000023c0      0x164 ./MQXLITE/kernel/lwsem.o
-                0x000023c0                _lwsem_post
+                0x000023a4      0x164 ./MQXLITE/kernel/lwsem.o
+                0x000023a4                _lwsem_post
  .text._lwsem_wait
-                0x00002524      0x128 ./MQXLITE/kernel/lwsem.o
-                0x00002524                _lwsem_wait
+                0x00002508      0x128 ./MQXLITE/kernel/lwsem.o
+                0x00002508                _lwsem_wait
  .text._mqx_set_cpu_type
-                0x0000264c       0x24 ./MQXLITE/kernel/mqx_utils.o
-                0x0000264c                _mqx_set_cpu_type
+                0x00002630       0x24 ./MQXLITE/kernel/mqx_utils.o
+                0x00002630                _mqx_set_cpu_type
  .text._mqx_init_kernel_data_internal
-                0x00002670      0x190 ./MQXLITE/kernel/mqx_utils.o
-                0x00002670                _mqx_init_kernel_data_internal
+                0x00002654      0x190 ./MQXLITE/kernel/mqx_utils.o
+                0x00002654                _mqx_init_kernel_data_internal
  .text._mqxlite_init
-                0x00002800      0x104 ./MQXLITE/kernel/mqxlite.o
-                0x00002800                _mqxlite_init
+                0x000027e4      0x104 ./MQXLITE/kernel/mqxlite.o
+                0x000027e4                _mqxlite_init
  .text._mqxlite
-                0x00002904       0xc0 ./MQXLITE/kernel/mqxlite.o
-                0x00002904                _mqxlite
+                0x000028e8       0xc0 ./MQXLITE/kernel/mqxlite.o
+                0x000028e8                _mqxlite
  .text._mqx_exit
-                0x000029c4       0x18 ./MQXLITE/kernel/mqxlite.o
-                0x000029c4                _mqx_exit
+                0x000029a8       0x18 ./MQXLITE/kernel/mqxlite.o
+                0x000029a8                _mqx_exit
  .text._task_destroy_internal
-                0x000029dc      0x268 ./MQXLITE/kernel/task.o
-                0x000029dc                _task_destroy_internal
+                0x000029c0      0x268 ./MQXLITE/kernel/task.o
+                0x000029c0                _task_destroy_internal
  .text._task_destroy
-                0x00002c44       0x1c ./MQXLITE/kernel/task.o
-                0x00002c44                _task_destroy
+                0x00002c28       0x1c ./MQXLITE/kernel/task.o
+                0x00002c28                _task_destroy
  .text._task_get_td
-                0x00002c60       0xc4 ./MQXLITE/kernel/task.o
-                0x00002c60                _task_get_td
+                0x00002c44       0xc4 ./MQXLITE/kernel/task.o
+                0x00002c44                _task_get_td
  .text._task_set_error
-                0x00002d24       0x4c ./MQXLITE/kernel/task.o
-                0x00002d24                _task_set_error
+                0x00002d08       0x4c ./MQXLITE/kernel/task.o
+                0x00002d08                _task_set_error
  .text._task_exit_function_internal
-                0x00002d70       0x24 ./MQXLITE/kernel/task.o
-                0x00002d70                _task_exit_function_internal
+                0x00002d54       0x24 ./MQXLITE/kernel/task.o
+                0x00002d54                _task_exit_function_internal
  .text._task_init_internal
-                0x00002d94      0x198 ./MQXLITE/kernel/task.o
-                0x00002d94                _task_init_internal
+                0x00002d78      0x198 ./MQXLITE/kernel/task.o
+                0x00002d78                _task_init_internal
  .text._task_fill_stack_internal
-                0x00002f2c       0x38 ./MQXLITE/kernel/task.o
-                0x00002f2c                _task_fill_stack_internal
+                0x00002f10       0x38 ./MQXLITE/kernel/task.o
+                0x00002f10                _task_fill_stack_internal
  .text._task_ready_internal
-                0x00002f64       0x44 ./MQXLITE/kernel/task.o
-                0x00002f64                _task_ready_internal
+                0x00002f48       0x44 ./MQXLITE/kernel/task.o
+                0x00002f48                _task_ready_internal
  .text._task_alloc_td_internal
-                0x00002fa8      0x108 ./MQXLITE/kernel/task.o
-                0x00002fa8                _task_alloc_td_internal
+                0x00002f8c      0x108 ./MQXLITE/kernel/task.o
+                0x00002f8c                _task_alloc_td_internal
  .text._task_set_error_td_internal
-                0x000030b0       0x30 ./MQXLITE/kernel/task.o
-                0x000030b0                _task_set_error_td_internal
+                0x00003094       0x30 ./MQXLITE/kernel/task.o
+                0x00003094                _task_set_error_td_internal
  .text._time_delay_for
-                0x000030e0       0x74 ./MQXLITE/kernel/time_ticks.o
-                0x000030e0                _time_delay_for
+                0x000030c4       0x74 ./MQXLITE/kernel/time_ticks.o
+                0x000030c4                _time_delay_for
  .text._time_delay_internal
-                0x00003154       0xc8 ./MQXLITE/kernel/time_ticks.o
-                0x00003154                _time_delay_internal
+                0x00003138       0xc8 ./MQXLITE/kernel/time_ticks.o
+                0x00003138                _time_delay_internal
  .text._time_delay_ticks
-                0x0000321c       0x7c ./MQXLITE/kernel/time_ticks.o
-                0x0000321c                _time_delay_ticks
+                0x00003200       0x7c ./MQXLITE/kernel/time_ticks.o
+                0x00003200                _time_delay_ticks
  .text._time_delay_until
-                0x00003298       0x70 ./MQXLITE/kernel/time_ticks.o
-                0x00003298                _time_delay_until
+                0x0000327c       0x70 ./MQXLITE/kernel/time_ticks.o
+                0x0000327c                _time_delay_until
  .text._time_notify_kernel
-                0x00003308      0x17c ./MQXLITE/kernel/time_ticks.o
-                0x00003308                _time_notify_kernel
+                0x000032ec      0x17c ./MQXLITE/kernel/time_ticks.o
+                0x000032ec                _time_notify_kernel
  .text._time_set_hwtick_function
-                0x00003484       0x28 ./MQXLITE/kernel/time_ticks.o
-                0x00003484                _time_set_hwtick_function
+                0x00003468       0x28 ./MQXLITE/kernel/time_ticks.o
+                0x00003468                _time_set_hwtick_function
  .text._time_set_hwticks_per_tick
-                0x000034ac       0x20 ./MQXLITE/kernel/time_ticks.o
-                0x000034ac                _time_set_hwticks_per_tick
+                0x00003490       0x20 ./MQXLITE/kernel/time_ticks.o
+                0x00003490                _time_set_hwticks_per_tick
  .text.ALIM_12V_RLY_Init
-                0x000034cc       0x80 ./Generated_Code/ALIM_12V_RLY.o
-                0x000034cc                ALIM_12V_RLY_Init
+                0x000034b0       0x80 ./Generated_Code/ALIM_12V_RLY.o
+                0x000034b0                ALIM_12V_RLY_Init
  .text.Components_Init
-                0x0000354c        0xc ./Generated_Code/Cpu.o
-                0x0000354c                Components_Init
+                0x00003530        0xc ./Generated_Code/Cpu.o
+                0x00003530                Components_Init
  .text.Cpu_INT_NMIInterrupt
-                0x00003558        0xc ./Generated_Code/Cpu.o
-                0x00003558                Cpu_INT_NMIInterrupt
+                0x0000353c        0xc ./Generated_Code/Cpu.o
+                0x0000353c                Cpu_INT_NMIInterrupt
  .text.SystemTimer1_OnCounterRestart
-                0x00003564       0x14 ./Generated_Code/MQX1.o
-                0x00003564                SystemTimer1_OnCounterRestart
+                0x00003548       0x14 ./Generated_Code/MQX1.o
+                0x00003548                SystemTimer1_OnCounterRestart
  .text.SystemTimer1_GetTicsPerSecond
-                0x00003578       0x2c ./Generated_Code/MQX1.o
-                0x00003578                SystemTimer1_GetTicsPerSecond
+                0x0000355c       0x2c ./Generated_Code/MQX1.o
+                0x0000355c                SystemTimer1_GetTicsPerSecond
  .text.system_timer_init
-                0x000035a4       0x68 ./Generated_Code/MQX1.o
-                0x000035a4                system_timer_init
+                0x00003588       0x68 ./Generated_Code/MQX1.o
+                0x00003588                system_timer_init
  .text.system_timer_start
-                0x0000360c       0x20 ./Generated_Code/MQX1.o
-                0x0000360c                system_timer_start
+                0x000035f0       0x20 ./Generated_Code/MQX1.o
+                0x000035f0                system_timer_start
  .text.MX28R_DE_Init
-                0x0000362c       0x80 ./Generated_Code/MX28R_DE.o
-                0x0000362c                MX28R_DE_Init
+                0x00003610       0x80 ./Generated_Code/MX28R_DE.o
+                0x00003610                MX28R_DE_Init
  .text.MX28R_DE_ClrVal
-                0x000036ac       0x20 ./Generated_Code/MX28R_DE.o
-                0x000036ac                MX28R_DE_ClrVal
+                0x00003690       0x20 ./Generated_Code/MX28R_DE.o
+                0x00003690                MX28R_DE_ClrVal
  .text.MX28R_DE_SetVal
-                0x000036cc       0x20 ./Generated_Code/MX28R_DE.o
-                0x000036cc                MX28R_DE_SetVal
+                0x000036b0       0x20 ./Generated_Code/MX28R_DE.o
+                0x000036b0                MX28R_DE_SetVal
  .text.MX28R_RE_Init
-                0x000036ec       0x80 ./Generated_Code/MX28R_RE.o
-                0x000036ec                MX28R_RE_Init
+                0x000036d0       0x80 ./Generated_Code/MX28R_RE.o
+                0x000036d0                MX28R_RE_Init
  .text.MX28R_RE_ClrVal
-                0x0000376c       0x20 ./Generated_Code/MX28R_RE.o
-                0x0000376c                MX28R_RE_ClrVal
+                0x00003750       0x20 ./Generated_Code/MX28R_RE.o
+                0x00003750                MX28R_RE_ClrVal
  .text.MX28R_RE_SetVal
-                0x0000378c       0x20 ./Generated_Code/MX28R_RE.o
-                0x0000378c                MX28R_RE_SetVal
+                0x00003770       0x20 ./Generated_Code/MX28R_RE.o
+                0x00003770                MX28R_RE_SetVal
  .text.MX28R_RS485_Init
-                0x000037ac      0x1f0 ./Generated_Code/MX28R_RS485.o
-                0x000037ac                MX28R_RS485_Init
+                0x00003790      0x1f0 ./Generated_Code/MX28R_RS485.o
+                0x00003790                MX28R_RS485_Init
  .text.MX28R_RS485_ReceiveBlock
-                0x0000399c       0x4c ./Generated_Code/MX28R_RS485.o
-                0x0000399c                MX28R_RS485_ReceiveBlock
+                0x00003980       0x4c ./Generated_Code/MX28R_RS485.o
+                0x00003980                MX28R_RS485_ReceiveBlock
  .text.MX28R_RS485_SendBlock
-                0x000039e8       0x78 ./Generated_Code/MX28R_RS485.o
-                0x000039e8                MX28R_RS485_SendBlock
+                0x000039cc       0x78 ./Generated_Code/MX28R_RS485.o
+                0x000039cc                MX28R_RS485_SendBlock
  .text.InterruptRx
-                0x00003a60       0x58 ./Generated_Code/MX28R_RS485.o
+                0x00003a44       0x58 ./Generated_Code/MX28R_RS485.o
  .text.InterruptTx
-                0x00003ab8       0x94 ./Generated_Code/MX28R_RS485.o
+                0x00003a9c       0x94 ./Generated_Code/MX28R_RS485.o
  .text.MX28R_RS485_Interrupt
-                0x00003b4c       0x90 ./Generated_Code/MX28R_RS485.o
-                0x00003b4c                MX28R_RS485_Interrupt
+                0x00003b30       0x90 ./Generated_Code/MX28R_RS485.o
+                0x00003b30                MX28R_RS485_Interrupt
  .text.SystemTimer1_Init
-                0x00003bdc       0x84 ./Generated_Code/SystemTimer1.o
-                0x00003bdc                SystemTimer1_Init
+                0x00003bc0       0x84 ./Generated_Code/SystemTimer1.o
+                0x00003bc0                SystemTimer1_Init
  .text.SystemTimer1_Enable
-                0x00003c60       0x28 ./Generated_Code/SystemTimer1.o
-                0x00003c60                SystemTimer1_Enable
+                0x00003c44       0x28 ./Generated_Code/SystemTimer1.o
+                0x00003c44                SystemTimer1_Enable
  .text.SystemTimer1_GetInputFrequency
-                0x00003c88       0x18 ./Generated_Code/SystemTimer1.o
-                0x00003c88                SystemTimer1_GetInputFrequency
+                0x00003c6c       0x18 ./Generated_Code/SystemTimer1.o
+                0x00003c6c                SystemTimer1_GetInputFrequency
  .text.SystemTimer1_GetPeriodTicks
-                0x00003ca0       0x3c ./Generated_Code/SystemTimer1.o
-                0x00003ca0                SystemTimer1_GetPeriodTicks
+                0x00003c84       0x3c ./Generated_Code/SystemTimer1.o
+                0x00003c84                SystemTimer1_GetPeriodTicks
  .text.SystemTimer1_GetCounterValue
-                0x00003cdc       0x1c ./Generated_Code/SystemTimer1.o
-                0x00003cdc                SystemTimer1_GetCounterValue
+                0x00003cc0       0x1c ./Generated_Code/SystemTimer1.o
+                0x00003cc0                SystemTimer1_GetCounterValue
  .text.SystemTimer1_Interrupt
-                0x00003cf8       0x2c ./Generated_Code/SystemTimer1.o
-                0x00003cf8                SystemTimer1_Interrupt
- .text.exit     0x00003d24       0x28 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-exit.o)
-                0x00003d24                exit
+                0x00003cdc       0x2c ./Generated_Code/SystemTimer1.o
+                0x00003cdc                SystemTimer1_Interrupt
+ .text.exit     0x00003d08       0x28 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-exit.o)
+                0x00003d08                exit
  .text.__libc_init_array
-                0x00003d4c       0x4c c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-init.o)
-                0x00003d4c                __libc_init_array
- .text.memset   0x00003d98       0x10 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-memset.o)
-                0x00003d98                memset
- .text._exit    0x00003da8        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(_exit.o)
-                0x00003da8                _exit
+                0x00003d30       0x4c c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-init.o)
+                0x00003d30                __libc_init_array
+ .text.memset   0x00003d7c       0x10 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-memset.o)
+                0x00003d7c                memset
+ .text._exit    0x00003d8c        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(_exit.o)
+                0x00003d8c                _exit
  *(.rodata)
- .rodata        0x00003dac       0x10 ./MQXLITE/kernel/mqx_utils.o
- .rodata        0x00003dbc       0xd8 ./MQXLITE/kernel/mqxlite.o
- .rodata        0x00003e94       0x10 ./MQXLITE/config/task_template_list.o
+ .rodata        0x00003d90       0x10 ./MQXLITE/kernel/mqx_utils.o
+ .rodata        0x00003da0       0xd8 ./MQXLITE/kernel/mqxlite.o
+ .rodata        0x00003e78       0x10 ./MQXLITE/config/task_template_list.o
  *(.rodata*)
  .rodata.ClockGenModeMatrix
-                0x00003ea4       0x80 ./Static_Code/System/CPU_Init.o
+                0x00003e88       0x80 ./Static_Code/System/CPU_Init.o
  .rodata.CPU_ClockConfigDescriptors
-                0x00003f24       0x1c ./Static_Code/System/CPU_Init.o
+                0x00003f08       0x1c ./Static_Code/System/CPU_Init.o
  .rodata.CPU_DefaultFEI
-                0x00003f40        0x8 ./Static_Code/System/CPU_Init.o
+                0x00003f24        0x8 ./Static_Code/System/CPU_Init.o
  .rodata.CPU_DefaultFBI
-                0x00003f48        0x8 ./Static_Code/System/CPU_Init.o
+                0x00003f2c        0x8 ./Static_Code/System/CPU_Init.o
  .rodata.CPU_DefaultBLPI
-                0x00003f50        0x8 ./Static_Code/System/CPU_Init.o
+                0x00003f34        0x8 ./Static_Code/System/CPU_Init.o
  .rodata.CPU_DefaultFEE
-                0x00003f58        0x8 ./Static_Code/System/CPU_Init.o
+                0x00003f3c        0x8 ./Static_Code/System/CPU_Init.o
  .rodata.CPU_DefaultFBE
-                0x00003f60        0x8 ./Static_Code/System/CPU_Init.o
+                0x00003f44        0x8 ./Static_Code/System/CPU_Init.o
  .rodata.CPU_DefaultBLPE
-                0x00003f68        0x8 ./Static_Code/System/CPU_Init.o
+                0x00003f4c        0x8 ./Static_Code/System/CPU_Init.o
  .rodata.CPU_DefaultPBE
-                0x00003f70        0x8 ./Static_Code/System/CPU_Init.o
+                0x00003f54        0x8 ./Static_Code/System/CPU_Init.o
  .rodata.CPU_DefaultPEE
-                0x00003f78        0x8 ./Static_Code/System/CPU_Init.o
+                0x00003f5c        0x8 ./Static_Code/System/CPU_Init.o
  .rodata.CPU_ClockGenModeRegs
-                0x00003f80       0x20 ./Static_Code/System/CPU_Init.o
+                0x00003f64       0x20 ./Static_Code/System/CPU_Init.o
  .rodata._mqx_version_number
-                0x00003fa0        0x4 ./MQXLITE/kernel/mqxlite.o
-                0x00003fa0                _mqx_version_number
+                0x00003f84        0x4 ./MQXLITE/kernel/mqxlite.o
+                0x00003f84                _mqx_version_number
  .rodata._mqx_vendor
-                0x00003fa4        0x4 ./MQXLITE/kernel/mqxlite.o
-                0x00003fa4                _mqx_vendor
+                0x00003f88        0x4 ./MQXLITE/kernel/mqxlite.o
+                0x00003f88                _mqx_vendor
  .rodata._mqx_path
-                0x00003fa8        0x4 ./MQXLITE/kernel/mqxlite.o
-                0x00003fa8                _mqx_path
+                0x00003f8c        0x4 ./MQXLITE/kernel/mqxlite.o
+                0x00003f8c                _mqx_path
  .rodata._mqxlite_version_number
-                0x00003fac        0x4 ./MQXLITE/kernel/mqxlite.o
-                0x00003fac                _mqxlite_version_number
+                0x00003f90        0x4 ./MQXLITE/kernel/mqxlite.o
+                0x00003f90                _mqxlite_version_number
  .rodata.MQX_template_list
-                0x00003fb0       0x54 ./MQXLITE/config/task_template_list.o
-                0x00003fb0                MQX_template_list
+                0x00003f94       0x54 ./MQXLITE/config/task_template_list.o
+                0x00003f94                MQX_template_list
  .rodata.MQX_init_struct
-                0x00004004       0x24 ./Generated_Code/MQX1.o
-                0x00004004                MQX_init_struct
+                0x00003fe8       0x24 ./Generated_Code/MQX1.o
+                0x00003fe8                MQX_init_struct
  .rodata.str1.1
-                0x00004028        0x2 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-impure.o)
- *fill*         0x0000402a        0x2 
+                0x0000400c        0x2 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-impure.o)
+ *fill*         0x0000400e        0x2 
  .rodata._global_impure_ptr
-                0x0000402c        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-impure.o)
-                0x0000402c                _global_impure_ptr
+                0x00004010        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-impure.o)
+                0x00004010                _global_impure_ptr
  .rodata.__sf_fake_stdin
-                0x00004030       0x20 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-findfp.o)
-                0x00004030                __sf_fake_stdin
+                0x00004014       0x20 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-findfp.o)
+                0x00004014                __sf_fake_stdin
  .rodata.__sf_fake_stdout
-                0x00004050       0x20 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-findfp.o)
-                0x00004050                __sf_fake_stdout
+                0x00004034       0x20 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-findfp.o)
+                0x00004034                __sf_fake_stdout
  .rodata.__sf_fake_stderr
-                0x00004070       0x20 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-findfp.o)
-                0x00004070                __sf_fake_stderr
+                0x00004054       0x20 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-findfp.o)
+                0x00004054                __sf_fake_stderr
  *(.glue_7)
  .glue_7        0x00000000        0x0 linker stubs
  *(.glue_7t)
  .glue_7t       0x00000000        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x00004090        0x0 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtbegin.o
+ .eh_frame      0x00004074        0x0 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtbegin.o
  *(.init)
- .init          0x00004090        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crti.o
-                0x00004090                _init
- .init          0x00004094        0x8 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtn.o
+ .init          0x00004074        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crti.o
+                0x00004074                _init
+ .init          0x00004078        0x8 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtn.o
  *(.fini)
- .fini          0x0000409c        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crti.o
-                0x0000409c                _fini
- .fini          0x000040a0        0x8 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtn.o
-                0x000040a8                . = ALIGN (0x4)
+ .fini          0x00004080        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crti.o
+                0x00004080                _fini
+ .fini          0x00004084        0x8 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtn.o
+                0x0000408c                . = ALIGN (0x4)
  *(KERNEL)
- KERNEL         0x000040a8      0x250 ./MQXLITE/psp/cortex_m/core/M4/dispatch.o
-                0x000040a8                _sched_start_internal
-                0x000040ac                _sched_run_internal
-                0x000040b2                _sched_check_scheduler_internal
-                0x000040d0                _sched_execute_scheduler_internal
-                0x000040d4                _mqx_api_call
-                0x000040d8                _task_block
-                0x000040dc                _svc_handler
-                0x0000415e                _pend_svc
-                0x000041c6                _int_kernel_isr
-                0x0000424e                _psp_exception_return
-                0x00004288                _psp_save_fp_context_internal
-                0x0000428a                _mem_test_and_set
-                0x000042a8                __get_PSP
-                0x000042ae                __get_MSP
-                0x000042ba                __get_PSR
-                0x000042c0                __enable_interrupt
-                0x000042c4                __disable_interrupt
-                0x000042c8                __get_LR
-                0x000042cc                __get_PC
-                0x000042d0                __get_CONTROL
+ KERNEL         0x0000408c      0x250 ./MQXLITE/psp/cortex_m/core/M4/dispatch.o
+                0x0000408c                _sched_start_internal
+                0x00004090                _sched_run_internal
+                0x00004096                _sched_check_scheduler_internal
+                0x000040b4                _sched_execute_scheduler_internal
+                0x000040b8                _mqx_api_call
+                0x000040bc                _task_block
+                0x000040c0                _svc_handler
+                0x00004142                _pend_svc
+                0x000041aa                _int_kernel_isr
+                0x00004232                _psp_exception_return
+                0x0000426c                _psp_save_fp_context_internal
+                0x0000426e                _mem_test_and_set
+                0x0000428c                __get_PSP
+                0x00004292                __get_MSP
+                0x0000429e                __get_PSR
+                0x000042a4                __enable_interrupt
+                0x000042a8                __disable_interrupt
+                0x000042ac                __get_LR
+                0x000042b0                __get_PC
+                0x000042b4                __get_CONTROL
                 0x00000000                __VECTOR_TABLE_START = __vector_table
-                0x000042f8                . = ALIGN (0x4)
+                0x000042dc                . = ALIGN (0x4)
  *(.rdata)
-                0x000042f8                . = ALIGN (0x4)
+                0x000042dc                . = ALIGN (0x4)
  *(.exception)
-                0x000042f8                . = ALIGN (0x4)
-                0x000042f8                __exception_table_start__ = .
-                0x000042f8                __exception_table_end__ = .
-                0x000042f8                __sinit__ = .
-                0x000042f8                _etext = .
+                0x000042dc                . = ALIGN (0x4)
+                0x000042dc                __exception_table_start__ = .
+                0x000042dc                __exception_table_end__ = .
+                0x000042dc                __sinit__ = .
+                0x000042dc                _etext = .
 
-.vfp11_veneer   0x000042f8        0x0
+.vfp11_veneer   0x000042dc        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x000042f8        0x0
+.v4_bx          0x000042dc        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x000042f8        0x0
+.iplt           0x000042dc        0x0
  .iplt          0x00000000        0x0 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x000042f8        0x8
-                0x000042f8                __exidx_start = .
+.ARM            0x000042dc        0x8
+                0x000042dc                __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x000042f8        0x8 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu/crt0.o
-                0x00004300                __exidx_end = .
+ .ARM.exidx     0x000042dc        0x8 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu/crt0.o
+                0x000042e4                __exidx_end = .
 
-.rel.dyn        0x00004300        0x0
+.rel.dyn        0x000042e4        0x0
  .rel.iplt      0x00000000        0x0 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtbegin.o
 
-.ctors          0x00004300        0x0
-                0x00004300                __CTOR_LIST__ = .
+.ctors          0x000042e4        0x0
+                0x000042e4                __CTOR_LIST__ = .
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *(.ctors)
-                0x00004300                __CTOR_END__ = .
+                0x000042e4                __CTOR_END__ = .
 
-.dtors          0x00004300        0x0
-                0x00004300                __DTOR_LIST__ = .
+.dtors          0x000042e4        0x0
+                0x000042e4                __DTOR_LIST__ = .
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *(.dtors)
-                0x00004300                __DTOR_END__ = .
+                0x000042e4                __DTOR_END__ = .
 
-.preinit_array  0x00004300        0x0
-                0x00004300                PROVIDE (__preinit_array_start, .)
+.preinit_array  0x000042e4        0x0
+                0x000042e4                PROVIDE (__preinit_array_start, .)
  *(.preinit_array*)
-                0x00004300                PROVIDE (__preinit_array_end, .)
+                0x000042e4                PROVIDE (__preinit_array_end, .)
 
-.init_array     0x00004300        0x4
-                0x00004300                PROVIDE (__init_array_start, .)
+.init_array     0x000042e4        0x4
+                0x000042e4                PROVIDE (__init_array_start, .)
  *(SORT(.init_array.*))
  *(.init_array*)
- .init_array    0x00004300        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtbegin.o
-                0x00004304                PROVIDE (__init_array_end, .)
+ .init_array    0x000042e4        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtbegin.o
+                0x000042e8                PROVIDE (__init_array_end, .)
 
-.fini_array     0x00004304        0x4
-                0x00004304                PROVIDE (__fini_array_start, .)
+.fini_array     0x000042e8        0x4
+                0x000042e8                PROVIDE (__fini_array_start, .)
  *(SORT(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x00004304        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtbegin.o
-                0x00004308                PROVIDE (__fini_array_end, .)
-                0x00004308                ___ROM_AT = .
+ .fini_array    0x000042e8        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtbegin.o
+                0x000042ec                PROVIDE (__fini_array_end, .)
+                0x000042ec                ___ROM_AT = .
 
-.data           0x20000000       0x70 load address 0x00004308
+.data           0x20000000       0x70 load address 0x000042ec
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                _sdata = .
  *(.data)
@@ -6136,16 +6139,16 @@ LOAD c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/f
                 0x20000070                . = ALIGN (0x4)
                 0x20000070                _edata = .
                 0x00000070                ___data_size = (_edata - _sdata)
-                0x00004378                ___m_data_1FFF0000_ROMStart = (___ROM_AT + SIZEOF (.data))
+                0x0000435c                ___m_data_1FFF0000_ROMStart = (___ROM_AT + SIZEOF (.data))
 
-.jcr            0x20000070        0x0 load address 0x00004378
+.jcr            0x20000070        0x0 load address 0x0000435c
  .jcr           0x20000070        0x0 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtbegin.o
 
-.igot.plt       0x20000070        0x0 load address 0x00004378
+.igot.plt       0x20000070        0x0 load address 0x0000435c
  .igot.plt      0x00000000        0x0 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtbegin.o
 
 .m_data_1FFF0000
-                0x1fff0000        0x0 load address 0x00004378
+                0x1fff0000        0x0 load address 0x0000435c
                 0x1fff0000                . = ALIGN (0x4)
                 0x1fff0000                ___m_data_1FFF0000_RAMStart = .
  *(.m_data_1FFF0000)
@@ -6154,7 +6157,7 @@ LOAD c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/f
                 0x00000000                ___m_data_1FFF0000_ROMSize = (___m_data_1FFF0000_RAMEnd - ___m_data_1FFF0000_RAMStart)
                 0x1fff0000                . = ALIGN (0x4)
 
-.bss            0x20000070      0xdb4 load address 0x00004378
+.bss            0x20000070      0xe34 load address 0x0000435c
                 0x20000070                __START_BSS = .
                 0x20000070                PROVIDE (__bss_start__, __START_BSS)
  *(.bss)
@@ -6176,64 +6179,64 @@ LOAD c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/f
  .bss.DeviceDataPrv__DEFAULT_RTOS_ALLOC
                 0x200000d0        0xc ./Generated_Code/SystemTimer1.o
  *(COMMON)
- COMMON         0x200000dc      0x100 ./Sources/Events.o
+ COMMON         0x200000dc      0x180 ./Sources/Events.o
                 0x200000dc                response
-                0x2000015c                lwevent_RS485
-                0x20000180                MX28R_RE_Ptr
-                0x20000184                FinalThtl
-                0x20000188                MX28R_DE_Ptr
-                0x2000018c                MX28R_RS485_Ptr
-                0x20000190                lwevent_setThrottle
-                0x200001b4                P0
-                0x200001b8                TxData
-                0x200001cc                P100
-                0x200001d0                lwsem_error_ptr
-                0x200001d4                thtlBuffer
-                0x200001d8                td_error_ptr
- COMMON         0x200001dc       0x10 ./MQXLITE/kernel/mqxlite.o
-                0x200001dc                _mqx_zero_tick_struct
-                0x200001e8                _mqx_system_stack
- COMMON         0x200001ec      0xc38 ./Generated_Code/MQX1.o
-                0x200001ec                _mqx_kernel_data_struct
-                0x20000430                mqx_interrupt_stack
-                0x20000540                mqx_static_ready_queue
-                0x200005f0                mqx_static_isr_table
-                0x200007a0                mqx_idle_task_stack
-                0x2000090c                Task2_task_stack
-                0x20000b98                Task1_task_stack
-                0x20000e24                . = ALIGN (0x4)
-                0x20000e24                __END_BSS = .
-                0x20000e24                PROVIDE (__bss_end__, __END_BSS)
-                0x00004378                _romp_at = ((___ROM_AT + SIZEOF (.data)) + SIZEOF (.m_data_1FFF0000))
+                0x200001dc                lwevent_RS485
+                0x20000200                MX28R_RE_Ptr
+                0x20000204                FinalThtl
+                0x20000208                MX28R_DE_Ptr
+                0x2000020c                MX28R_RS485_Ptr
+                0x20000210                lwevent_setThrottle
+                0x20000234                P0
+                0x20000238                TxData
+                0x2000024c                P100
+                0x20000250                lwsem_error_ptr
+                0x20000254                thtlBuffer
+                0x20000258                td_error_ptr
+ COMMON         0x2000025c       0x10 ./MQXLITE/kernel/mqxlite.o
+                0x2000025c                _mqx_zero_tick_struct
+                0x20000268                _mqx_system_stack
+ COMMON         0x2000026c      0xc38 ./Generated_Code/MQX1.o
+                0x2000026c                _mqx_kernel_data_struct
+                0x200004b0                mqx_interrupt_stack
+                0x200005c0                mqx_static_ready_queue
+                0x20000670                mqx_static_isr_table
+                0x20000820                mqx_idle_task_stack
+                0x2000098c                Task2_task_stack
+                0x20000c18                Task1_task_stack
+                0x20000ea4                . = ALIGN (0x4)
+                0x20000ea4                __END_BSS = .
+                0x20000ea4                PROVIDE (__bss_end__, __END_BSS)
+                0x0000435c                _romp_at = ((___ROM_AT + SIZEOF (.data)) + SIZEOF (.m_data_1FFF0000))
 
-.romp           0x20000e24       0x24 load address 0x00004378
-                0x00004378                __S_romp = _romp_at
-                0x20000e24        0x4 LONG 0x4308 ___ROM_AT
-                0x20000e28        0x4 LONG 0x20000000 _sdata
-                0x20000e2c        0x4 LONG 0x70 ___data_size
-                0x20000e30        0x4 LONG 0x4378 ___m_data_1FFF0000_ROMStart
-                0x20000e34        0x4 LONG 0x1fff0000 ___m_data_1FFF0000_RAMStart
-                0x20000e38        0x4 LONG 0x0 ___m_data_1FFF0000_ROMSize
-                0x20000e3c        0x4 LONG 0x0
-                0x20000e40        0x4 LONG 0x0
-                0x20000e44        0x4 LONG 0x0
+.romp           0x20000ea4       0x24 load address 0x0000435c
+                0x0000435c                __S_romp = _romp_at
+                0x20000ea4        0x4 LONG 0x42ec ___ROM_AT
+                0x20000ea8        0x4 LONG 0x20000000 _sdata
+                0x20000eac        0x4 LONG 0x70 ___data_size
+                0x20000eb0        0x4 LONG 0x435c ___m_data_1FFF0000_ROMStart
+                0x20000eb4        0x4 LONG 0x1fff0000 ___m_data_1FFF0000_RAMStart
+                0x20000eb8        0x4 LONG 0x0 ___m_data_1FFF0000_ROMSize
+                0x20000ebc        0x4 LONG 0x0
+                0x20000ec0        0x4 LONG 0x0
+                0x20000ec4        0x4 LONG 0x0
                 0x00100000                text_end = (ORIGIN (m_text) + 0xffbf0)
-                0x0000439c                data_init_end = ((___m_data_1FFF0000_ROMStart + SIZEOF (.m_data_1FFF0000)) + SIZEOF (.romp))
+                0x00004380                data_init_end = ((___m_data_1FFF0000_ROMStart + SIZEOF (.m_data_1FFF0000)) + SIZEOF (.romp))
                 0x00000001                ASSERT ((data_init_end <= text_end), region m_text overflowed with text and data)
 
 ._user_heap_stack
-                0x20000e48      0x400 load address 0x0000439c
-                0x20000e48                . = ALIGN (0x4)
-                0x20000e48                PROVIDE (end, .)
-                0x20000e48                PROVIDE (_end, .)
-                0x20000e48                PROVIDE (__end__, .)
-                0x20000e48                __heap_addr = .
-                0x20000e48                __HeapBase = .
-                0x20000e48                . = (. + __heap_size)
-                0x20000e48                __HeapLimit = .
-                0x20001248                . = (. + __stack_size)
- *fill*         0x20000e48      0x400 
-                0x20001248                . = ALIGN (0x4)
+                0x20000ec8      0x400 load address 0x00004380
+                0x20000ec8                . = ALIGN (0x4)
+                0x20000ec8                PROVIDE (end, .)
+                0x20000ec8                PROVIDE (_end, .)
+                0x20000ec8                PROVIDE (__end__, .)
+                0x20000ec8                __heap_addr = .
+                0x20000ec8                __HeapBase = .
+                0x20000ec8                . = (. + __heap_size)
+                0x20000ec8                __HeapLimit = .
+                0x200012c8                . = (. + __stack_size)
+ *fill*         0x20000ec8      0x400 
+                0x200012c8                . = ALIGN (0x4)
 
 .ARM.attributes
                 0x00000000       0x30
@@ -6330,81 +6333,81 @@ LOAD c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/f
                 0x00000951       0x22 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtn.o
 OUTPUT(MX28R_Dev.elf elf32-littlearm)
 
-.debug_info     0x00000000    0x12917
+.debug_info     0x00000000    0x12954
  .debug_info    0x00000000      0xe9d ./Static_Code/System/CPU_Init.o
  .debug_info    0x00000e9d      0xac0 ./Static_Code/System/Vectors.o
  .debug_info    0x0000195d      0x5d1 ./Sources/Events.o
- .debug_info    0x00001f2e      0x842 ./Sources/MX28R.o
- .debug_info    0x00002770       0xa1 ./Sources/main.o
- .debug_info    0x00002811      0x5c9 ./Sources/mqx_tasks.o
- .debug_info    0x00002dda      0x3b0 ./Project_Settings/Startup_Code/startup.o
- .debug_info    0x0000318a       0x87 ./MQXLITE/psp/cortex_m/core/M4/boot.o
- .debug_info    0x00003211       0x8b ./MQXLITE/psp/cortex_m/core/M4/dispatch.o
- .debug_info    0x0000329c      0x991 ./MQXLITE/psp/cortex_m/int_inst.o
- .debug_info    0x00003c2d      0x33d ./MQXLITE/psp/cortex_m/int_vtab.o
- .debug_info    0x00003f6a      0x144 ./MQXLITE/psp/cortex_m/mem_zero.o
- .debug_info    0x000040ae       0xe2 ./MQXLITE/psp/cortex_m/psp_iinit.o
- .debug_info    0x00004190      0xa29 ./MQXLITE/psp/cortex_m/psp_tiad.o
- .debug_info    0x00004bb9      0xa22 ./MQXLITE/psp/cortex_m/psp_tinm.o
- .debug_info    0x000055db      0xbd0 ./MQXLITE/psp/cortex_m/sc_irdyq.o
- .debug_info    0x000061ab      0x62c ./MQXLITE/psp/cortex_m/stack_bu.o
- .debug_info    0x000067d7      0x409 ./MQXLITE/psp/cortex_m/stack_de.o
- .debug_info    0x00006be0      0x9a4 ./MQXLITE/kernel/idletask.o
- .debug_info    0x00007584      0xd87 ./MQXLITE/kernel/int.o
- .debug_info    0x0000830b     0x1052 ./MQXLITE/kernel/lwevent.o
- .debug_info    0x0000935d     0x1011 ./MQXLITE/kernel/lwsem.o
- .debug_info    0x0000a36e      0xb43 ./MQXLITE/kernel/mqx_utils.o
- .debug_info    0x0000aeb1      0xef4 ./MQXLITE/kernel/mqxlite.o
- .debug_info    0x0000bda5     0x1f83 ./MQXLITE/kernel/task.o
- .debug_info    0x0000dd28      0xfd2 ./MQXLITE/kernel/time_ticks.o
- .debug_info    0x0000ecfa      0x40b ./MQXLITE/config/task_template_list.o
- .debug_info    0x0000f105      0x523 ./Generated_Code/ALIM_12V_RLY.o
- .debug_info    0x0000f628       0xbb ./Generated_Code/Cpu.o
- .debug_info    0x0000f6e3      0xeec ./Generated_Code/MQX1.o
- .debug_info    0x000105cf      0x523 ./Generated_Code/MX28R_DE.o
- .debug_info    0x00010af2      0x523 ./Generated_Code/MX28R_RE.o
- .debug_info    0x00011015      0xc25 ./Generated_Code/MX28R_RS485.o
- .debug_info    0x00011c3a      0x501 ./Generated_Code/PE_LDD.o
- .debug_info    0x0001213b      0x7dc ./Generated_Code/SystemTimer1.o
+ .debug_info    0x00001f2e      0x87f ./Sources/MX28R.o
+ .debug_info    0x000027ad       0xa1 ./Sources/main.o
+ .debug_info    0x0000284e      0x5c9 ./Sources/mqx_tasks.o
+ .debug_info    0x00002e17      0x3b0 ./Project_Settings/Startup_Code/startup.o
+ .debug_info    0x000031c7       0x87 ./MQXLITE/psp/cortex_m/core/M4/boot.o
+ .debug_info    0x0000324e       0x8b ./MQXLITE/psp/cortex_m/core/M4/dispatch.o
+ .debug_info    0x000032d9      0x991 ./MQXLITE/psp/cortex_m/int_inst.o
+ .debug_info    0x00003c6a      0x33d ./MQXLITE/psp/cortex_m/int_vtab.o
+ .debug_info    0x00003fa7      0x144 ./MQXLITE/psp/cortex_m/mem_zero.o
+ .debug_info    0x000040eb       0xe2 ./MQXLITE/psp/cortex_m/psp_iinit.o
+ .debug_info    0x000041cd      0xa29 ./MQXLITE/psp/cortex_m/psp_tiad.o
+ .debug_info    0x00004bf6      0xa22 ./MQXLITE/psp/cortex_m/psp_tinm.o
+ .debug_info    0x00005618      0xbd0 ./MQXLITE/psp/cortex_m/sc_irdyq.o
+ .debug_info    0x000061e8      0x62c ./MQXLITE/psp/cortex_m/stack_bu.o
+ .debug_info    0x00006814      0x409 ./MQXLITE/psp/cortex_m/stack_de.o
+ .debug_info    0x00006c1d      0x9a4 ./MQXLITE/kernel/idletask.o
+ .debug_info    0x000075c1      0xd87 ./MQXLITE/kernel/int.o
+ .debug_info    0x00008348     0x1052 ./MQXLITE/kernel/lwevent.o
+ .debug_info    0x0000939a     0x1011 ./MQXLITE/kernel/lwsem.o
+ .debug_info    0x0000a3ab      0xb43 ./MQXLITE/kernel/mqx_utils.o
+ .debug_info    0x0000aeee      0xef4 ./MQXLITE/kernel/mqxlite.o
+ .debug_info    0x0000bde2     0x1f83 ./MQXLITE/kernel/task.o
+ .debug_info    0x0000dd65      0xfd2 ./MQXLITE/kernel/time_ticks.o
+ .debug_info    0x0000ed37      0x40b ./MQXLITE/config/task_template_list.o
+ .debug_info    0x0000f142      0x523 ./Generated_Code/ALIM_12V_RLY.o
+ .debug_info    0x0000f665       0xbb ./Generated_Code/Cpu.o
+ .debug_info    0x0000f720      0xeec ./Generated_Code/MQX1.o
+ .debug_info    0x0001060c      0x523 ./Generated_Code/MX28R_DE.o
+ .debug_info    0x00010b2f      0x523 ./Generated_Code/MX28R_RE.o
+ .debug_info    0x00011052      0xc25 ./Generated_Code/MX28R_RS485.o
+ .debug_info    0x00011c77      0x501 ./Generated_Code/PE_LDD.o
+ .debug_info    0x00012178      0x7dc ./Generated_Code/SystemTimer1.o
 
-.debug_abbrev   0x00000000     0x2d45
+.debug_abbrev   0x00000000     0x2d8c
  .debug_abbrev  0x00000000      0x1e5 ./Static_Code/System/CPU_Init.o
  .debug_abbrev  0x000001e5       0xee ./Static_Code/System/Vectors.o
  .debug_abbrev  0x000002d3      0x10d ./Sources/Events.o
- .debug_abbrev  0x000003e0      0x184 ./Sources/MX28R.o
- .debug_abbrev  0x00000564       0x47 ./Sources/main.o
- .debug_abbrev  0x000005ab       0xf5 ./Sources/mqx_tasks.o
- .debug_abbrev  0x000006a0      0x189 ./Project_Settings/Startup_Code/startup.o
- .debug_abbrev  0x00000829       0x14 ./MQXLITE/psp/cortex_m/core/M4/boot.o
- .debug_abbrev  0x0000083d       0x14 ./MQXLITE/psp/cortex_m/core/M4/dispatch.o
- .debug_abbrev  0x00000851      0x12e ./MQXLITE/psp/cortex_m/int_inst.o
- .debug_abbrev  0x0000097f      0x120 ./MQXLITE/psp/cortex_m/int_vtab.o
- .debug_abbrev  0x00000a9f       0x80 ./MQXLITE/psp/cortex_m/mem_zero.o
- .debug_abbrev  0x00000b1f       0x72 ./MQXLITE/psp/cortex_m/psp_iinit.o
- .debug_abbrev  0x00000b91      0x13d ./MQXLITE/psp/cortex_m/psp_tiad.o
- .debug_abbrev  0x00000cce      0x155 ./MQXLITE/psp/cortex_m/psp_tinm.o
- .debug_abbrev  0x00000e23      0x192 ./MQXLITE/psp/cortex_m/sc_irdyq.o
- .debug_abbrev  0x00000fb5      0x117 ./MQXLITE/psp/cortex_m/stack_bu.o
- .debug_abbrev  0x000010cc       0xdc ./MQXLITE/psp/cortex_m/stack_de.o
- .debug_abbrev  0x000011a8      0x144 ./MQXLITE/kernel/idletask.o
- .debug_abbrev  0x000012ec      0x1ff ./MQXLITE/kernel/int.o
- .debug_abbrev  0x000014eb      0x1dd ./MQXLITE/kernel/lwevent.o
- .debug_abbrev  0x000016c8      0x1c7 ./MQXLITE/kernel/lwsem.o
- .debug_abbrev  0x0000188f      0x1e1 ./MQXLITE/kernel/mqx_utils.o
- .debug_abbrev  0x00001a70      0x1e3 ./MQXLITE/kernel/mqxlite.o
- .debug_abbrev  0x00001c53      0x276 ./MQXLITE/kernel/task.o
- .debug_abbrev  0x00001ec9      0x200 ./MQXLITE/kernel/time_ticks.o
- .debug_abbrev  0x000020c9       0xba ./MQXLITE/config/task_template_list.o
- .debug_abbrev  0x00002183      0x15d ./Generated_Code/ALIM_12V_RLY.o
- .debug_abbrev  0x000022e0       0x59 ./Generated_Code/Cpu.o
- .debug_abbrev  0x00002339      0x1bd ./Generated_Code/MQX1.o
- .debug_abbrev  0x000024f6      0x15d ./Generated_Code/MX28R_DE.o
- .debug_abbrev  0x00002653      0x15d ./Generated_Code/MX28R_RE.o
- .debug_abbrev  0x000027b0      0x240 ./Generated_Code/MX28R_RS485.o
- .debug_abbrev  0x000029f0      0x123 ./Generated_Code/PE_LDD.o
- .debug_abbrev  0x00002b13      0x232 ./Generated_Code/SystemTimer1.o
+ .debug_abbrev  0x000003e0      0x1cb ./Sources/MX28R.o
+ .debug_abbrev  0x000005ab       0x47 ./Sources/main.o
+ .debug_abbrev  0x000005f2       0xf5 ./Sources/mqx_tasks.o
+ .debug_abbrev  0x000006e7      0x189 ./Project_Settings/Startup_Code/startup.o
+ .debug_abbrev  0x00000870       0x14 ./MQXLITE/psp/cortex_m/core/M4/boot.o
+ .debug_abbrev  0x00000884       0x14 ./MQXLITE/psp/cortex_m/core/M4/dispatch.o
+ .debug_abbrev  0x00000898      0x12e ./MQXLITE/psp/cortex_m/int_inst.o
+ .debug_abbrev  0x000009c6      0x120 ./MQXLITE/psp/cortex_m/int_vtab.o
+ .debug_abbrev  0x00000ae6       0x80 ./MQXLITE/psp/cortex_m/mem_zero.o
+ .debug_abbrev  0x00000b66       0x72 ./MQXLITE/psp/cortex_m/psp_iinit.o
+ .debug_abbrev  0x00000bd8      0x13d ./MQXLITE/psp/cortex_m/psp_tiad.o
+ .debug_abbrev  0x00000d15      0x155 ./MQXLITE/psp/cortex_m/psp_tinm.o
+ .debug_abbrev  0x00000e6a      0x192 ./MQXLITE/psp/cortex_m/sc_irdyq.o
+ .debug_abbrev  0x00000ffc      0x117 ./MQXLITE/psp/cortex_m/stack_bu.o
+ .debug_abbrev  0x00001113       0xdc ./MQXLITE/psp/cortex_m/stack_de.o
+ .debug_abbrev  0x000011ef      0x144 ./MQXLITE/kernel/idletask.o
+ .debug_abbrev  0x00001333      0x1ff ./MQXLITE/kernel/int.o
+ .debug_abbrev  0x00001532      0x1dd ./MQXLITE/kernel/lwevent.o
+ .debug_abbrev  0x0000170f      0x1c7 ./MQXLITE/kernel/lwsem.o
+ .debug_abbrev  0x000018d6      0x1e1 ./MQXLITE/kernel/mqx_utils.o
+ .debug_abbrev  0x00001ab7      0x1e3 ./MQXLITE/kernel/mqxlite.o
+ .debug_abbrev  0x00001c9a      0x276 ./MQXLITE/kernel/task.o
+ .debug_abbrev  0x00001f10      0x200 ./MQXLITE/kernel/time_ticks.o
+ .debug_abbrev  0x00002110       0xba ./MQXLITE/config/task_template_list.o
+ .debug_abbrev  0x000021ca      0x15d ./Generated_Code/ALIM_12V_RLY.o
+ .debug_abbrev  0x00002327       0x59 ./Generated_Code/Cpu.o
+ .debug_abbrev  0x00002380      0x1bd ./Generated_Code/MQX1.o
+ .debug_abbrev  0x0000253d      0x15d ./Generated_Code/MX28R_DE.o
+ .debug_abbrev  0x0000269a      0x15d ./Generated_Code/MX28R_RE.o
+ .debug_abbrev  0x000027f7      0x240 ./Generated_Code/MX28R_RS485.o
+ .debug_abbrev  0x00002a37      0x123 ./Generated_Code/PE_LDD.o
+ .debug_abbrev  0x00002b5a      0x232 ./Generated_Code/SystemTimer1.o
 
-.debug_aranges  0x00000000      0xca0
+.debug_aranges  0x00000000      0xca8
  .debug_aranges
                 0x00000000       0x40 ./Static_Code/System/CPU_Init.o
  .debug_aranges
@@ -6412,105 +6415,105 @@ OUTPUT(MX28R_Dev.elf elf32-littlearm)
  .debug_aranges
                 0x00000380       0x30 ./Sources/Events.o
  .debug_aranges
-                0x000003b0       0x70 ./Sources/MX28R.o
+                0x000003b0       0x78 ./Sources/MX28R.o
  .debug_aranges
-                0x00000420       0x20 ./Sources/main.o
+                0x00000428       0x20 ./Sources/main.o
  .debug_aranges
-                0x00000440       0x28 ./Sources/mqx_tasks.o
+                0x00000448       0x28 ./Sources/mqx_tasks.o
  .debug_aranges
-                0x00000468       0x50 ./Project_Settings/Startup_Code/startup.o
+                0x00000470       0x50 ./Project_Settings/Startup_Code/startup.o
  .debug_aranges
-                0x000004b8       0x20 ./MQXLITE/psp/cortex_m/core/M4/boot.o
+                0x000004c0       0x20 ./MQXLITE/psp/cortex_m/core/M4/boot.o
  .debug_aranges
-                0x000004d8       0x20 ./MQXLITE/psp/cortex_m/core/M4/dispatch.o
+                0x000004e0       0x20 ./MQXLITE/psp/cortex_m/core/M4/dispatch.o
  .debug_aranges
-                0x000004f8       0x20 ./MQXLITE/psp/cortex_m/int_inst.o
+                0x00000500       0x20 ./MQXLITE/psp/cortex_m/int_inst.o
  .debug_aranges
-                0x00000518       0x28 ./MQXLITE/psp/cortex_m/int_vtab.o
+                0x00000520       0x28 ./MQXLITE/psp/cortex_m/int_vtab.o
  .debug_aranges
-                0x00000540       0x20 ./MQXLITE/psp/cortex_m/mem_zero.o
+                0x00000548       0x20 ./MQXLITE/psp/cortex_m/mem_zero.o
  .debug_aranges
-                0x00000560       0x20 ./MQXLITE/psp/cortex_m/psp_iinit.o
+                0x00000568       0x20 ./MQXLITE/psp/cortex_m/psp_iinit.o
  .debug_aranges
-                0x00000580       0x20 ./MQXLITE/psp/cortex_m/psp_tiad.o
+                0x00000588       0x20 ./MQXLITE/psp/cortex_m/psp_tiad.o
  .debug_aranges
-                0x000005a0       0x20 ./MQXLITE/psp/cortex_m/psp_tinm.o
+                0x000005a8       0x20 ./MQXLITE/psp/cortex_m/psp_tinm.o
  .debug_aranges
-                0x000005c0       0x28 ./MQXLITE/psp/cortex_m/sc_irdyq.o
+                0x000005c8       0x28 ./MQXLITE/psp/cortex_m/sc_irdyq.o
  .debug_aranges
-                0x000005e8       0x20 ./MQXLITE/psp/cortex_m/stack_bu.o
+                0x000005f0       0x20 ./MQXLITE/psp/cortex_m/stack_bu.o
  .debug_aranges
-                0x00000608       0x20 ./MQXLITE/psp/cortex_m/stack_de.o
+                0x00000610       0x20 ./MQXLITE/psp/cortex_m/stack_de.o
  .debug_aranges
-                0x00000628       0x20 ./MQXLITE/kernel/idletask.o
+                0x00000630       0x20 ./MQXLITE/kernel/idletask.o
  .debug_aranges
-                0x00000648       0x90 ./MQXLITE/kernel/int.o
+                0x00000650       0x90 ./MQXLITE/kernel/int.o
  .debug_aranges
-                0x000006d8       0x80 ./MQXLITE/kernel/lwevent.o
+                0x000006e0       0x80 ./MQXLITE/kernel/lwevent.o
  .debug_aranges
-                0x00000758       0x80 ./MQXLITE/kernel/lwsem.o
+                0x00000760       0x80 ./MQXLITE/kernel/lwsem.o
  .debug_aranges
-                0x000007d8       0x60 ./MQXLITE/kernel/mqx_utils.o
+                0x000007e0       0x60 ./MQXLITE/kernel/mqx_utils.o
  .debug_aranges
-                0x00000838       0x30 ./MQXLITE/kernel/mqxlite.o
+                0x00000840       0x30 ./MQXLITE/kernel/mqxlite.o
  .debug_aranges
-                0x00000868      0x160 ./MQXLITE/kernel/task.o
+                0x00000870      0x160 ./MQXLITE/kernel/task.o
  .debug_aranges
-                0x000009c8       0xb8 ./MQXLITE/kernel/time_ticks.o
+                0x000009d0       0xb8 ./MQXLITE/kernel/time_ticks.o
  .debug_aranges
-                0x00000a80       0x18 ./MQXLITE/config/task_template_list.o
+                0x00000a88       0x18 ./MQXLITE/config/task_template_list.o
  .debug_aranges
-                0x00000a98       0x40 ./Generated_Code/ALIM_12V_RLY.o
+                0x00000aa0       0x40 ./Generated_Code/ALIM_12V_RLY.o
  .debug_aranges
-                0x00000ad8       0x28 ./Generated_Code/Cpu.o
+                0x00000ae0       0x28 ./Generated_Code/Cpu.o
  .debug_aranges
-                0x00000b00       0x40 ./Generated_Code/MQX1.o
+                0x00000b08       0x40 ./Generated_Code/MQX1.o
  .debug_aranges
-                0x00000b40       0x40 ./Generated_Code/MX28R_DE.o
+                0x00000b48       0x40 ./Generated_Code/MX28R_DE.o
  .debug_aranges
-                0x00000b80       0x40 ./Generated_Code/MX28R_RE.o
+                0x00000b88       0x40 ./Generated_Code/MX28R_RE.o
  .debug_aranges
-                0x00000bc0       0x50 ./Generated_Code/MX28R_RS485.o
+                0x00000bc8       0x50 ./Generated_Code/MX28R_RS485.o
  .debug_aranges
-                0x00000c10       0x30 ./Generated_Code/PE_LDD.o
+                0x00000c18       0x30 ./Generated_Code/PE_LDD.o
  .debug_aranges
-                0x00000c40       0x60 ./Generated_Code/SystemTimer1.o
+                0x00000c48       0x60 ./Generated_Code/SystemTimer1.o
 
-.debug_ranges   0x00000000      0xa48
+.debug_ranges   0x00000000      0xa50
  .debug_ranges  0x00000000       0x30 ./Static_Code/System/CPU_Init.o
  .debug_ranges  0x00000030      0x330 ./Static_Code/System/Vectors.o
  .debug_ranges  0x00000360       0x20 ./Sources/Events.o
- .debug_ranges  0x00000380       0x60 ./Sources/MX28R.o
- .debug_ranges  0x000003e0       0x10 ./Sources/main.o
- .debug_ranges  0x000003f0       0x18 ./Sources/mqx_tasks.o
- .debug_ranges  0x00000408       0x40 ./Project_Settings/Startup_Code/startup.o
- .debug_ranges  0x00000448       0x10 ./MQXLITE/psp/cortex_m/int_inst.o
- .debug_ranges  0x00000458       0x18 ./MQXLITE/psp/cortex_m/int_vtab.o
- .debug_ranges  0x00000470       0x10 ./MQXLITE/psp/cortex_m/mem_zero.o
- .debug_ranges  0x00000480       0x10 ./MQXLITE/psp/cortex_m/psp_iinit.o
- .debug_ranges  0x00000490       0x10 ./MQXLITE/psp/cortex_m/psp_tiad.o
- .debug_ranges  0x000004a0       0x10 ./MQXLITE/psp/cortex_m/psp_tinm.o
- .debug_ranges  0x000004b0       0x18 ./MQXLITE/psp/cortex_m/sc_irdyq.o
- .debug_ranges  0x000004c8       0x10 ./MQXLITE/psp/cortex_m/stack_bu.o
- .debug_ranges  0x000004d8       0x10 ./MQXLITE/psp/cortex_m/stack_de.o
- .debug_ranges  0x000004e8       0x10 ./MQXLITE/kernel/idletask.o
- .debug_ranges  0x000004f8       0x80 ./MQXLITE/kernel/int.o
- .debug_ranges  0x00000578       0x70 ./MQXLITE/kernel/lwevent.o
- .debug_ranges  0x000005e8       0x70 ./MQXLITE/kernel/lwsem.o
- .debug_ranges  0x00000658       0x50 ./MQXLITE/kernel/mqx_utils.o
- .debug_ranges  0x000006a8       0x20 ./MQXLITE/kernel/mqxlite.o
- .debug_ranges  0x000006c8      0x150 ./MQXLITE/kernel/task.o
- .debug_ranges  0x00000818       0xa8 ./MQXLITE/kernel/time_ticks.o
- .debug_ranges  0x000008c0       0x30 ./Generated_Code/ALIM_12V_RLY.o
- .debug_ranges  0x000008f0       0x18 ./Generated_Code/Cpu.o
- .debug_ranges  0x00000908       0x30 ./Generated_Code/MQX1.o
- .debug_ranges  0x00000938       0x30 ./Generated_Code/MX28R_DE.o
- .debug_ranges  0x00000968       0x30 ./Generated_Code/MX28R_RE.o
- .debug_ranges  0x00000998       0x40 ./Generated_Code/MX28R_RS485.o
- .debug_ranges  0x000009d8       0x20 ./Generated_Code/PE_LDD.o
- .debug_ranges  0x000009f8       0x50 ./Generated_Code/SystemTimer1.o
+ .debug_ranges  0x00000380       0x68 ./Sources/MX28R.o
+ .debug_ranges  0x000003e8       0x10 ./Sources/main.o
+ .debug_ranges  0x000003f8       0x18 ./Sources/mqx_tasks.o
+ .debug_ranges  0x00000410       0x40 ./Project_Settings/Startup_Code/startup.o
+ .debug_ranges  0x00000450       0x10 ./MQXLITE/psp/cortex_m/int_inst.o
+ .debug_ranges  0x00000460       0x18 ./MQXLITE/psp/cortex_m/int_vtab.o
+ .debug_ranges  0x00000478       0x10 ./MQXLITE/psp/cortex_m/mem_zero.o
+ .debug_ranges  0x00000488       0x10 ./MQXLITE/psp/cortex_m/psp_iinit.o
+ .debug_ranges  0x00000498       0x10 ./MQXLITE/psp/cortex_m/psp_tiad.o
+ .debug_ranges  0x000004a8       0x10 ./MQXLITE/psp/cortex_m/psp_tinm.o
+ .debug_ranges  0x000004b8       0x18 ./MQXLITE/psp/cortex_m/sc_irdyq.o
+ .debug_ranges  0x000004d0       0x10 ./MQXLITE/psp/cortex_m/stack_bu.o
+ .debug_ranges  0x000004e0       0x10 ./MQXLITE/psp/cortex_m/stack_de.o
+ .debug_ranges  0x000004f0       0x10 ./MQXLITE/kernel/idletask.o
+ .debug_ranges  0x00000500       0x80 ./MQXLITE/kernel/int.o
+ .debug_ranges  0x00000580       0x70 ./MQXLITE/kernel/lwevent.o
+ .debug_ranges  0x000005f0       0x70 ./MQXLITE/kernel/lwsem.o
+ .debug_ranges  0x00000660       0x50 ./MQXLITE/kernel/mqx_utils.o
+ .debug_ranges  0x000006b0       0x20 ./MQXLITE/kernel/mqxlite.o
+ .debug_ranges  0x000006d0      0x150 ./MQXLITE/kernel/task.o
+ .debug_ranges  0x00000820       0xa8 ./MQXLITE/kernel/time_ticks.o
+ .debug_ranges  0x000008c8       0x30 ./Generated_Code/ALIM_12V_RLY.o
+ .debug_ranges  0x000008f8       0x18 ./Generated_Code/Cpu.o
+ .debug_ranges  0x00000910       0x30 ./Generated_Code/MQX1.o
+ .debug_ranges  0x00000940       0x30 ./Generated_Code/MX28R_DE.o
+ .debug_ranges  0x00000970       0x30 ./Generated_Code/MX28R_RE.o
+ .debug_ranges  0x000009a0       0x40 ./Generated_Code/MX28R_RS485.o
+ .debug_ranges  0x000009e0       0x20 ./Generated_Code/PE_LDD.o
+ .debug_ranges  0x00000a00       0x50 ./Generated_Code/SystemTimer1.o
 
-.debug_macro    0x00000000    0x37d67
+.debug_macro    0x00000000    0x37d73
  .debug_macro   0x00000000      0x286 ./Static_Code/System/CPU_Init.o
  .debug_macro   0x00000286      0x850 ./Static_Code/System/CPU_Init.o
  .debug_macro   0x00000ad6       0x16 ./Static_Code/System/CPU_Init.o
@@ -6590,164 +6593,164 @@ OUTPUT(MX28R_Dev.elf elf32-littlearm)
  .debug_macro   0x0001d782      0x66f ./Sources/Events.o
  .debug_macro   0x0001ddf1       0x7b ./Sources/Events.o
  .debug_macro   0x0001de6c      0x182 ./Sources/Events.o
- .debug_macro   0x0001dfee       0x28 ./Sources/Events.o
- .debug_macro   0x0001e016      0x425 ./Sources/MX28R.o
- .debug_macro   0x0001e43b      0x166 ./Sources/MX28R.o
- .debug_macro   0x0001e5a1       0x52 ./Sources/MX28R.o
- .debug_macro   0x0001e5f3       0x16 ./Sources/MX28R.o
- .debug_macro   0x0001e609       0x43 ./Sources/MX28R.o
- .debug_macro   0x0001e64c      0x180 ./Sources/MX28R.o
- .debug_macro   0x0001e7cc      0x2a6 ./Sources/MX28R.o
- .debug_macro   0x0001ea72       0x10 ./Sources/MX28R.o
- .debug_macro   0x0001ea82       0x35 ./Sources/MX28R.o
- .debug_macro   0x0001eab7      0x3a5 ./Sources/main.o
- .debug_macro   0x0001ee5c      0x3ae ./Sources/mqx_tasks.o
- .debug_macro   0x0001f20a      0x121 ./Project_Settings/Startup_Code/startup.o
- .debug_macro   0x0001f32b       0x4a ./Project_Settings/Startup_Code/startup.o
- .debug_macro   0x0001f375       0x16 ./Project_Settings/Startup_Code/startup.o
- .debug_macro   0x0001f38b       0x22 ./Project_Settings/Startup_Code/startup.o
- .debug_macro   0x0001f3ad       0x10 ./Project_Settings/Startup_Code/startup.o
- .debug_macro   0x0001f3bd      0x20f ./Project_Settings/Startup_Code/startup.o
- .debug_macro   0x0001f5cc    0x110a2 ./Project_Settings/Startup_Code/startup.o
- .debug_macro   0x0003066e      0x285 ./MQXLITE/psp/cortex_m/int_inst.o
- .debug_macro   0x000308f3      0x285 ./MQXLITE/psp/cortex_m/int_vtab.o
- .debug_macro   0x00030b78      0x285 ./MQXLITE/psp/cortex_m/mem_zero.o
- .debug_macro   0x00030dfd      0x285 ./MQXLITE/psp/cortex_m/psp_iinit.o
- .debug_macro   0x00031082      0x285 ./MQXLITE/psp/cortex_m/psp_tiad.o
- .debug_macro   0x00031307      0x285 ./MQXLITE/psp/cortex_m/psp_tinm.o
- .debug_macro   0x0003158c      0x285 ./MQXLITE/psp/cortex_m/sc_irdyq.o
- .debug_macro   0x00031811      0x285 ./MQXLITE/psp/cortex_m/stack_bu.o
- .debug_macro   0x00031a96      0x285 ./MQXLITE/psp/cortex_m/stack_de.o
- .debug_macro   0x00031d1b      0x285 ./MQXLITE/kernel/idletask.o
- .debug_macro   0x00031fa0      0x285 ./MQXLITE/kernel/int.o
- .debug_macro   0x00032225      0x292 ./MQXLITE/kernel/lwevent.o
- .debug_macro   0x000324b7       0x10 ./MQXLITE/kernel/lwevent.o
- .debug_macro   0x000324c7      0x285 ./MQXLITE/kernel/lwsem.o
- .debug_macro   0x0003274c      0x293 ./MQXLITE/kernel/mqx_utils.o
- .debug_macro   0x000329df      0x293 ./MQXLITE/kernel/mqxlite.o
- .debug_macro   0x00032c72      0x2f0 ./MQXLITE/kernel/task.o
- .debug_macro   0x00032f62     0x178b ./MQXLITE/kernel/task.o
- .debug_macro   0x000346ed      0x291 ./MQXLITE/kernel/time_ticks.o
- .debug_macro   0x0003497e      0x247 ./MQXLITE/config/task_template_list.o
- .debug_macro   0x00034bc5      0x1bc ./Generated_Code/ALIM_12V_RLY.o
- .debug_macro   0x00034d81       0x9c ./Generated_Code/ALIM_12V_RLY.o
- .debug_macro   0x00034e1d      0x6fd ./Generated_Code/ALIM_12V_RLY.o
- .debug_macro   0x0003551a     0x1785 ./Generated_Code/ALIM_12V_RLY.o
- .debug_macro   0x00036c9f      0x12c ./Generated_Code/ALIM_12V_RLY.o
- .debug_macro   0x00036dcb       0x40 ./Generated_Code/ALIM_12V_RLY.o
- .debug_macro   0x00036e0b      0x265 ./Generated_Code/Cpu.o
- .debug_macro   0x00037070      0x26d ./Generated_Code/MQX1.o
- .debug_macro   0x000372dd       0x51 ./Generated_Code/MQX1.o
- .debug_macro   0x0003732e      0x1bc ./Generated_Code/MX28R_DE.o
- .debug_macro   0x000374ea      0x1bc ./Generated_Code/MX28R_RE.o
- .debug_macro   0x000376a6       0x3a ./Generated_Code/MX28R_RE.o
- .debug_macro   0x000376e0      0x27a ./Generated_Code/MX28R_RS485.o
- .debug_macro   0x0003795a      0x232 ./Generated_Code/PE_LDD.o
- .debug_macro   0x00037b8c      0x1db ./Generated_Code/SystemTimer1.o
+ .debug_macro   0x0001dfee       0x34 ./Sources/Events.o
+ .debug_macro   0x0001e022      0x425 ./Sources/MX28R.o
+ .debug_macro   0x0001e447      0x166 ./Sources/MX28R.o
+ .debug_macro   0x0001e5ad       0x52 ./Sources/MX28R.o
+ .debug_macro   0x0001e5ff       0x16 ./Sources/MX28R.o
+ .debug_macro   0x0001e615       0x43 ./Sources/MX28R.o
+ .debug_macro   0x0001e658      0x180 ./Sources/MX28R.o
+ .debug_macro   0x0001e7d8      0x2a6 ./Sources/MX28R.o
+ .debug_macro   0x0001ea7e       0x10 ./Sources/MX28R.o
+ .debug_macro   0x0001ea8e       0x35 ./Sources/MX28R.o
+ .debug_macro   0x0001eac3      0x3a5 ./Sources/main.o
+ .debug_macro   0x0001ee68      0x3ae ./Sources/mqx_tasks.o
+ .debug_macro   0x0001f216      0x121 ./Project_Settings/Startup_Code/startup.o
+ .debug_macro   0x0001f337       0x4a ./Project_Settings/Startup_Code/startup.o
+ .debug_macro   0x0001f381       0x16 ./Project_Settings/Startup_Code/startup.o
+ .debug_macro   0x0001f397       0x22 ./Project_Settings/Startup_Code/startup.o
+ .debug_macro   0x0001f3b9       0x10 ./Project_Settings/Startup_Code/startup.o
+ .debug_macro   0x0001f3c9      0x20f ./Project_Settings/Startup_Code/startup.o
+ .debug_macro   0x0001f5d8    0x110a2 ./Project_Settings/Startup_Code/startup.o
+ .debug_macro   0x0003067a      0x285 ./MQXLITE/psp/cortex_m/int_inst.o
+ .debug_macro   0x000308ff      0x285 ./MQXLITE/psp/cortex_m/int_vtab.o
+ .debug_macro   0x00030b84      0x285 ./MQXLITE/psp/cortex_m/mem_zero.o
+ .debug_macro   0x00030e09      0x285 ./MQXLITE/psp/cortex_m/psp_iinit.o
+ .debug_macro   0x0003108e      0x285 ./MQXLITE/psp/cortex_m/psp_tiad.o
+ .debug_macro   0x00031313      0x285 ./MQXLITE/psp/cortex_m/psp_tinm.o
+ .debug_macro   0x00031598      0x285 ./MQXLITE/psp/cortex_m/sc_irdyq.o
+ .debug_macro   0x0003181d      0x285 ./MQXLITE/psp/cortex_m/stack_bu.o
+ .debug_macro   0x00031aa2      0x285 ./MQXLITE/psp/cortex_m/stack_de.o
+ .debug_macro   0x00031d27      0x285 ./MQXLITE/kernel/idletask.o
+ .debug_macro   0x00031fac      0x285 ./MQXLITE/kernel/int.o
+ .debug_macro   0x00032231      0x292 ./MQXLITE/kernel/lwevent.o
+ .debug_macro   0x000324c3       0x10 ./MQXLITE/kernel/lwevent.o
+ .debug_macro   0x000324d3      0x285 ./MQXLITE/kernel/lwsem.o
+ .debug_macro   0x00032758      0x293 ./MQXLITE/kernel/mqx_utils.o
+ .debug_macro   0x000329eb      0x293 ./MQXLITE/kernel/mqxlite.o
+ .debug_macro   0x00032c7e      0x2f0 ./MQXLITE/kernel/task.o
+ .debug_macro   0x00032f6e     0x178b ./MQXLITE/kernel/task.o
+ .debug_macro   0x000346f9      0x291 ./MQXLITE/kernel/time_ticks.o
+ .debug_macro   0x0003498a      0x247 ./MQXLITE/config/task_template_list.o
+ .debug_macro   0x00034bd1      0x1bc ./Generated_Code/ALIM_12V_RLY.o
+ .debug_macro   0x00034d8d       0x9c ./Generated_Code/ALIM_12V_RLY.o
+ .debug_macro   0x00034e29      0x6fd ./Generated_Code/ALIM_12V_RLY.o
+ .debug_macro   0x00035526     0x1785 ./Generated_Code/ALIM_12V_RLY.o
+ .debug_macro   0x00036cab      0x12c ./Generated_Code/ALIM_12V_RLY.o
+ .debug_macro   0x00036dd7       0x40 ./Generated_Code/ALIM_12V_RLY.o
+ .debug_macro   0x00036e17      0x265 ./Generated_Code/Cpu.o
+ .debug_macro   0x0003707c      0x26d ./Generated_Code/MQX1.o
+ .debug_macro   0x000372e9       0x51 ./Generated_Code/MQX1.o
+ .debug_macro   0x0003733a      0x1bc ./Generated_Code/MX28R_DE.o
+ .debug_macro   0x000374f6      0x1bc ./Generated_Code/MX28R_RE.o
+ .debug_macro   0x000376b2       0x3a ./Generated_Code/MX28R_RE.o
+ .debug_macro   0x000376ec      0x27a ./Generated_Code/MX28R_RS485.o
+ .debug_macro   0x00037966      0x232 ./Generated_Code/PE_LDD.o
+ .debug_macro   0x00037b98      0x1db ./Generated_Code/SystemTimer1.o
 
-.debug_line     0x00000000     0xeeed
+.debug_line     0x00000000     0xeee6
  .debug_line    0x00000000      0x761 ./Static_Code/System/CPU_Init.o
  .debug_line    0x00000761      0xd04 ./Static_Code/System/Vectors.o
  .debug_line    0x00001465      0x7d3 ./Sources/Events.o
- .debug_line    0x00001c38      0xa31 ./Sources/MX28R.o
- .debug_line    0x00002669      0x7aa ./Sources/main.o
- .debug_line    0x00002e13      0x7c5 ./Sources/mqx_tasks.o
- .debug_line    0x000035d8      0x3d5 ./Project_Settings/Startup_Code/startup.o
- .debug_line    0x000039ad       0x71 ./MQXLITE/psp/cortex_m/core/M4/boot.o
- .debug_line    0x00003a1e      0x17a ./MQXLITE/psp/cortex_m/core/M4/dispatch.o
- .debug_line    0x00003b98      0x648 ./MQXLITE/psp/cortex_m/int_inst.o
- .debug_line    0x000041e0      0x65b ./MQXLITE/psp/cortex_m/int_vtab.o
- .debug_line    0x0000483b      0x6cf ./MQXLITE/psp/cortex_m/mem_zero.o
- .debug_line    0x00004f0a      0x649 ./MQXLITE/psp/cortex_m/psp_iinit.o
- .debug_line    0x00005553      0x64c ./MQXLITE/psp/cortex_m/psp_tiad.o
- .debug_line    0x00005b9f      0x64a ./MQXLITE/psp/cortex_m/psp_tinm.o
- .debug_line    0x000061e9      0x6a1 ./MQXLITE/psp/cortex_m/sc_irdyq.o
- .debug_line    0x0000688a      0x656 ./MQXLITE/psp/cortex_m/stack_bu.o
- .debug_line    0x00006ee0      0x644 ./MQXLITE/psp/cortex_m/stack_de.o
- .debug_line    0x00007524      0x645 ./MQXLITE/kernel/idletask.o
- .debug_line    0x00007b69      0x807 ./MQXLITE/kernel/int.o
- .debug_line    0x00008370      0x8c3 ./MQXLITE/kernel/lwevent.o
- .debug_line    0x00008c33      0x8d0 ./MQXLITE/kernel/lwsem.o
- .debug_line    0x00009503      0x724 ./MQXLITE/kernel/mqx_utils.o
- .debug_line    0x00009c27      0x6cd ./MQXLITE/kernel/mqxlite.o
- .debug_line    0x0000a2f4      0xcc2 ./MQXLITE/kernel/task.o
- .debug_line    0x0000afb6      0x97e ./MQXLITE/kernel/time_ticks.o
- .debug_line    0x0000b934      0x5e9 ./MQXLITE/config/task_template_list.o
- .debug_line    0x0000bf1d      0x563 ./Generated_Code/ALIM_12V_RLY.o
- .debug_line    0x0000c480      0x642 ./Generated_Code/Cpu.o
- .debug_line    0x0000cac2      0x682 ./Generated_Code/MQX1.o
- .debug_line    0x0000d144      0x55b ./Generated_Code/MX28R_DE.o
- .debug_line    0x0000d69f      0x55b ./Generated_Code/MX28R_RE.o
- .debug_line    0x0000dbfa      0x726 ./Generated_Code/MX28R_RS485.o
- .debug_line    0x0000e320      0x5ed ./Generated_Code/PE_LDD.o
- .debug_line    0x0000e90d      0x5e0 ./Generated_Code/SystemTimer1.o
+ .debug_line    0x00001c38      0xa2a ./Sources/MX28R.o
+ .debug_line    0x00002662      0x7aa ./Sources/main.o
+ .debug_line    0x00002e0c      0x7c5 ./Sources/mqx_tasks.o
+ .debug_line    0x000035d1      0x3d5 ./Project_Settings/Startup_Code/startup.o
+ .debug_line    0x000039a6       0x71 ./MQXLITE/psp/cortex_m/core/M4/boot.o
+ .debug_line    0x00003a17      0x17a ./MQXLITE/psp/cortex_m/core/M4/dispatch.o
+ .debug_line    0x00003b91      0x648 ./MQXLITE/psp/cortex_m/int_inst.o
+ .debug_line    0x000041d9      0x65b ./MQXLITE/psp/cortex_m/int_vtab.o
+ .debug_line    0x00004834      0x6cf ./MQXLITE/psp/cortex_m/mem_zero.o
+ .debug_line    0x00004f03      0x649 ./MQXLITE/psp/cortex_m/psp_iinit.o
+ .debug_line    0x0000554c      0x64c ./MQXLITE/psp/cortex_m/psp_tiad.o
+ .debug_line    0x00005b98      0x64a ./MQXLITE/psp/cortex_m/psp_tinm.o
+ .debug_line    0x000061e2      0x6a1 ./MQXLITE/psp/cortex_m/sc_irdyq.o
+ .debug_line    0x00006883      0x656 ./MQXLITE/psp/cortex_m/stack_bu.o
+ .debug_line    0x00006ed9      0x644 ./MQXLITE/psp/cortex_m/stack_de.o
+ .debug_line    0x0000751d      0x645 ./MQXLITE/kernel/idletask.o
+ .debug_line    0x00007b62      0x807 ./MQXLITE/kernel/int.o
+ .debug_line    0x00008369      0x8c3 ./MQXLITE/kernel/lwevent.o
+ .debug_line    0x00008c2c      0x8d0 ./MQXLITE/kernel/lwsem.o
+ .debug_line    0x000094fc      0x724 ./MQXLITE/kernel/mqx_utils.o
+ .debug_line    0x00009c20      0x6cd ./MQXLITE/kernel/mqxlite.o
+ .debug_line    0x0000a2ed      0xcc2 ./MQXLITE/kernel/task.o
+ .debug_line    0x0000afaf      0x97e ./MQXLITE/kernel/time_ticks.o
+ .debug_line    0x0000b92d      0x5e9 ./MQXLITE/config/task_template_list.o
+ .debug_line    0x0000bf16      0x563 ./Generated_Code/ALIM_12V_RLY.o
+ .debug_line    0x0000c479      0x642 ./Generated_Code/Cpu.o
+ .debug_line    0x0000cabb      0x682 ./Generated_Code/MQX1.o
+ .debug_line    0x0000d13d      0x55b ./Generated_Code/MX28R_DE.o
+ .debug_line    0x0000d698      0x55b ./Generated_Code/MX28R_RE.o
+ .debug_line    0x0000dbf3      0x726 ./Generated_Code/MX28R_RS485.o
+ .debug_line    0x0000e319      0x5ed ./Generated_Code/PE_LDD.o
+ .debug_line    0x0000e906      0x5e0 ./Generated_Code/SystemTimer1.o
 
-.debug_str      0x00000000    0xf5d7b
+.debug_str      0x00000000    0xf5df0
  .debug_str     0x00000000    0x753ce ./Static_Code/System/CPU_Init.o
                               0x75a59 (size before relaxing)
  .debug_str     0x000753ce      0x984 ./Static_Code/System/Vectors.o
                               0x75c9d (size before relaxing)
- .debug_str     0x00075d52    0x7ab93 ./Sources/Events.o
-                              0xeefd2 (size before relaxing)
- .debug_str     0x000f08e5     0x217f ./Sources/MX28R.o
-                              0xf116e (size before relaxing)
- .debug_str     0x000f2a64       0x17 ./Sources/main.o
+ .debug_str     0x00075d52    0x7abed ./Sources/Events.o
+                              0xef02c (size before relaxing)
+ .debug_str     0x000f093f     0x219a ./Sources/MX28R.o
+                              0xf11e3 (size before relaxing)
+ .debug_str     0x000f2ad9       0x17 ./Sources/main.o
                               0xee85c (size before relaxing)
- .debug_str     0x000f2a7b       0x2d ./Sources/mqx_tasks.o
-                              0xeefb5 (size before relaxing)
- .debug_str     0x000f2aa8      0x186 ./Project_Settings/Startup_Code/startup.o
+ .debug_str     0x000f2af0       0x2d ./Sources/mqx_tasks.o
+                              0xef00f (size before relaxing)
+ .debug_str     0x000f2b1d      0x186 ./Project_Settings/Startup_Code/startup.o
                               0x636a5 (size before relaxing)
- .debug_str     0x000f2c2e     0x10a0 ./MQXLITE/psp/cortex_m/int_inst.o
+ .debug_str     0x000f2ca3     0x10a0 ./MQXLITE/psp/cortex_m/int_inst.o
                               0x7523d (size before relaxing)
- .debug_str     0x000f3cce      0x154 ./MQXLITE/psp/cortex_m/int_vtab.o
+ .debug_str     0x000f3d43      0x154 ./MQXLITE/psp/cortex_m/int_vtab.o
                               0x74aaa (size before relaxing)
- .debug_str     0x000f3e22       0x8f ./MQXLITE/psp/cortex_m/mem_zero.o
+ .debug_str     0x000f3e97       0x8f ./MQXLITE/psp/cortex_m/mem_zero.o
                               0x749b7 (size before relaxing)
- .debug_str     0x000f3eb1       0x6b ./MQXLITE/psp/cortex_m/psp_iinit.o
+ .debug_str     0x000f3f26       0x6b ./MQXLITE/psp/cortex_m/psp_iinit.o
                               0x74991 (size before relaxing)
- .debug_str     0x000f3f1c       0x80 ./MQXLITE/psp/cortex_m/psp_tiad.o
+ .debug_str     0x000f3f91       0x80 ./MQXLITE/psp/cortex_m/psp_tiad.o
                               0x75272 (size before relaxing)
- .debug_str     0x000f3f9c       0x38 ./MQXLITE/psp/cortex_m/psp_tinm.o
+ .debug_str     0x000f4011       0x38 ./MQXLITE/psp/cortex_m/psp_tinm.o
                               0x75285 (size before relaxing)
- .debug_str     0x000f3fd4      0x12f ./MQXLITE/psp/cortex_m/sc_irdyq.o
+ .debug_str     0x000f4049      0x12f ./MQXLITE/psp/cortex_m/sc_irdyq.o
                               0x75390 (size before relaxing)
- .debug_str     0x000f4103      0x15f ./MQXLITE/psp/cortex_m/stack_bu.o
+ .debug_str     0x000f4178      0x15f ./MQXLITE/psp/cortex_m/stack_bu.o
                               0x74da7 (size before relaxing)
- .debug_str     0x000f4262       0x3c ./MQXLITE/psp/cortex_m/stack_de.o
+ .debug_str     0x000f42d7       0x3c ./MQXLITE/psp/cortex_m/stack_de.o
                               0x74c48 (size before relaxing)
- .debug_str     0x000f429e       0x2c ./MQXLITE/kernel/idletask.o
+ .debug_str     0x000f4313       0x2c ./MQXLITE/kernel/idletask.o
                               0x7523f (size before relaxing)
- .debug_str     0x000f42ca      0x1d5 ./MQXLITE/kernel/int.o
+ .debug_str     0x000f433f      0x1d5 ./MQXLITE/kernel/int.o
                               0x75479 (size before relaxing)
- .debug_str     0x000f449f      0x217 ./MQXLITE/kernel/lwevent.o
+ .debug_str     0x000f4514      0x217 ./MQXLITE/kernel/lwevent.o
                               0x75502 (size before relaxing)
- .debug_str     0x000f46b6      0x13c ./MQXLITE/kernel/lwsem.o
+ .debug_str     0x000f472b      0x13c ./MQXLITE/kernel/lwsem.o
                               0x75421 (size before relaxing)
- .debug_str     0x000f47f2      0x11f ./MQXLITE/kernel/mqx_utils.o
+ .debug_str     0x000f4867      0x11f ./MQXLITE/kernel/mqx_utils.o
                               0x753b8 (size before relaxing)
- .debug_str     0x000f4911      0x158 ./MQXLITE/kernel/mqxlite.o
+ .debug_str     0x000f4986      0x158 ./MQXLITE/kernel/mqxlite.o
                               0x7591a (size before relaxing)
- .debug_str     0x000f4a69      0x5a8 ./MQXLITE/kernel/task.o
+ .debug_str     0x000f4ade      0x5a8 ./MQXLITE/kernel/task.o
                               0x77f3e (size before relaxing)
- .debug_str     0x000f5011      0x274 ./MQXLITE/kernel/time_ticks.o
+ .debug_str     0x000f5086      0x274 ./MQXLITE/kernel/time_ticks.o
                               0x75565 (size before relaxing)
- .debug_str     0x000f5285       0x66 ./MQXLITE/config/task_template_list.o
+ .debug_str     0x000f52fa       0x66 ./MQXLITE/config/task_template_list.o
                               0x744fa (size before relaxing)
- .debug_str     0x000f52eb      0x145 ./Generated_Code/ALIM_12V_RLY.o
+ .debug_str     0x000f5360      0x145 ./Generated_Code/ALIM_12V_RLY.o
                               0x72d2e (size before relaxing)
- .debug_str     0x000f5430       0x28 ./Generated_Code/Cpu.o
+ .debug_str     0x000f54a5       0x28 ./Generated_Code/Cpu.o
                               0x73efa (size before relaxing)
- .debug_str     0x000f5458      0x21d ./Generated_Code/MQX1.o
+ .debug_str     0x000f54cd      0x21d ./Generated_Code/MQX1.o
                               0x74fe3 (size before relaxing)
- .debug_str     0x000f5675       0x98 ./Generated_Code/MX28R_DE.o
+ .debug_str     0x000f56ea       0x98 ./Generated_Code/MX28R_DE.o
                               0x72c7d (size before relaxing)
- .debug_str     0x000f570d       0x98 ./Generated_Code/MX28R_RE.o
+ .debug_str     0x000f5782       0x98 ./Generated_Code/MX28R_RE.o
                               0x72c7d (size before relaxing)
- .debug_str     0x000f57a5      0x2ad ./Generated_Code/MX28R_RS485.o
+ .debug_str     0x000f581a      0x2ad ./Generated_Code/MX28R_RS485.o
                               0x8334b (size before relaxing)
- .debug_str     0x000f5a52      0x153 ./Generated_Code/PE_LDD.o
+ .debug_str     0x000f5ac7      0x153 ./Generated_Code/PE_LDD.o
                               0x74576 (size before relaxing)
- .debug_str     0x000f5ba5      0x1d6 ./Generated_Code/SystemTimer1.o
+ .debug_str     0x000f5c1a      0x1d6 ./Generated_Code/SystemTimer1.o
                               0x73945 (size before relaxing)
 
 .comment        0x00000000       0x70
@@ -6786,44 +6789,44 @@ OUTPUT(MX28R_Dev.elf elf32-littlearm)
  .comment       0x00000000       0x71 ./Generated_Code/PE_LDD.o
  .comment       0x00000000       0x71 ./Generated_Code/SystemTimer1.o
 
-.debug_frame    0x00000000     0x27a8
+.debug_frame    0x00000000     0x27c8
  .debug_frame   0x00000000       0x9c ./Static_Code/System/CPU_Init.o
  .debug_frame   0x0000009c      0xcb0 ./Static_Code/System/Vectors.o
  .debug_frame   0x00000d4c       0x68 ./Sources/Events.o
- .debug_frame   0x00000db4      0x160 ./Sources/MX28R.o
- .debug_frame   0x00000f14       0x2c ./Sources/main.o
- .debug_frame   0x00000f40       0x50 ./Sources/mqx_tasks.o
- .debug_frame   0x00000f90       0xc0 ./Project_Settings/Startup_Code/startup.o
- .debug_frame   0x00001050       0x30 ./MQXLITE/psp/cortex_m/int_inst.o
- .debug_frame   0x00001080       0x44 ./MQXLITE/psp/cortex_m/int_vtab.o
- .debug_frame   0x000010c4       0x30 ./MQXLITE/psp/cortex_m/mem_zero.o
- .debug_frame   0x000010f4       0x30 ./MQXLITE/psp/cortex_m/psp_iinit.o
- .debug_frame   0x00001124       0x34 ./MQXLITE/psp/cortex_m/psp_tiad.o
- .debug_frame   0x00001158       0x30 ./MQXLITE/psp/cortex_m/psp_tinm.o
- .debug_frame   0x00001188       0x48 ./MQXLITE/psp/cortex_m/sc_irdyq.o
- .debug_frame   0x000011d0       0x30 ./MQXLITE/psp/cortex_m/stack_bu.o
- .debug_frame   0x00001200       0x2c ./MQXLITE/psp/cortex_m/stack_de.o
- .debug_frame   0x0000122c       0x2c ./MQXLITE/kernel/idletask.o
- .debug_frame   0x00001258      0x1d8 ./MQXLITE/kernel/int.o
- .debug_frame   0x00001430      0x1ac ./MQXLITE/kernel/lwevent.o
- .debug_frame   0x000015dc      0x1ac ./MQXLITE/kernel/lwsem.o
- .debug_frame   0x00001788      0x110 ./MQXLITE/kernel/mqx_utils.o
- .debug_frame   0x00001898       0x74 ./MQXLITE/kernel/mqxlite.o
- .debug_frame   0x0000190c      0x50c ./MQXLITE/kernel/task.o
- .debug_frame   0x00001e18      0x29c ./MQXLITE/kernel/time_ticks.o
- .debug_frame   0x000020b4       0x9c ./Generated_Code/ALIM_12V_RLY.o
- .debug_frame   0x00002150       0x48 ./Generated_Code/Cpu.o
- .debug_frame   0x00002198       0xb0 ./Generated_Code/MQX1.o
- .debug_frame   0x00002248       0x9c ./Generated_Code/MX28R_DE.o
- .debug_frame   0x000022e4       0x9c ./Generated_Code/MX28R_RE.o
- .debug_frame   0x00002380       0xe8 ./Generated_Code/MX28R_RS485.o
- .debug_frame   0x00002468       0x64 ./Generated_Code/PE_LDD.o
- .debug_frame   0x000024cc      0x11c ./Generated_Code/SystemTimer1.o
- .debug_frame   0x000025e8       0x28 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-exit.o)
- .debug_frame   0x00002610       0x2c c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-init.o)
- .debug_frame   0x0000263c       0x20 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-memset.o)
- .debug_frame   0x0000265c      0x12c c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-findfp.o)
- .debug_frame   0x00002788       0x20 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(_exit.o)
+ .debug_frame   0x00000db4      0x180 ./Sources/MX28R.o
+ .debug_frame   0x00000f34       0x2c ./Sources/main.o
+ .debug_frame   0x00000f60       0x50 ./Sources/mqx_tasks.o
+ .debug_frame   0x00000fb0       0xc0 ./Project_Settings/Startup_Code/startup.o
+ .debug_frame   0x00001070       0x30 ./MQXLITE/psp/cortex_m/int_inst.o
+ .debug_frame   0x000010a0       0x44 ./MQXLITE/psp/cortex_m/int_vtab.o
+ .debug_frame   0x000010e4       0x30 ./MQXLITE/psp/cortex_m/mem_zero.o
+ .debug_frame   0x00001114       0x30 ./MQXLITE/psp/cortex_m/psp_iinit.o
+ .debug_frame   0x00001144       0x34 ./MQXLITE/psp/cortex_m/psp_tiad.o
+ .debug_frame   0x00001178       0x30 ./MQXLITE/psp/cortex_m/psp_tinm.o
+ .debug_frame   0x000011a8       0x48 ./MQXLITE/psp/cortex_m/sc_irdyq.o
+ .debug_frame   0x000011f0       0x30 ./MQXLITE/psp/cortex_m/stack_bu.o
+ .debug_frame   0x00001220       0x2c ./MQXLITE/psp/cortex_m/stack_de.o
+ .debug_frame   0x0000124c       0x2c ./MQXLITE/kernel/idletask.o
+ .debug_frame   0x00001278      0x1d8 ./MQXLITE/kernel/int.o
+ .debug_frame   0x00001450      0x1ac ./MQXLITE/kernel/lwevent.o
+ .debug_frame   0x000015fc      0x1ac ./MQXLITE/kernel/lwsem.o
+ .debug_frame   0x000017a8      0x110 ./MQXLITE/kernel/mqx_utils.o
+ .debug_frame   0x000018b8       0x74 ./MQXLITE/kernel/mqxlite.o
+ .debug_frame   0x0000192c      0x50c ./MQXLITE/kernel/task.o
+ .debug_frame   0x00001e38      0x29c ./MQXLITE/kernel/time_ticks.o
+ .debug_frame   0x000020d4       0x9c ./Generated_Code/ALIM_12V_RLY.o
+ .debug_frame   0x00002170       0x48 ./Generated_Code/Cpu.o
+ .debug_frame   0x000021b8       0xb0 ./Generated_Code/MQX1.o
+ .debug_frame   0x00002268       0x9c ./Generated_Code/MX28R_DE.o
+ .debug_frame   0x00002304       0x9c ./Generated_Code/MX28R_RE.o
+ .debug_frame   0x000023a0       0xe8 ./Generated_Code/MX28R_RS485.o
+ .debug_frame   0x00002488       0x64 ./Generated_Code/PE_LDD.o
+ .debug_frame   0x000024ec      0x11c ./Generated_Code/SystemTimer1.o
+ .debug_frame   0x00002608       0x28 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-exit.o)
+ .debug_frame   0x00002630       0x2c c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-init.o)
+ .debug_frame   0x0000265c       0x20 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-memset.o)
+ .debug_frame   0x0000267c      0x12c c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-findfp.o)
+ .debug_frame   0x000027a8       0x20 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(_exit.o)
 
 .stabstr        0x00000000      0x14d
  .stabstr       0x00000000      0x14d c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(close.o)

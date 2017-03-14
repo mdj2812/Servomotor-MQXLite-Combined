@@ -13,11 +13,15 @@
 #define THTL_ADD_STEP                   2
 
 // Torque limit of the motor
-#define TORQUE_LIMIT 		(uint16_t)(0x0100)
+#define THTL_TORQUE_LIMIT 		(uint16_t)(0x0100)
+// Moving speed of the motor
+#define THTL_MOVING_SPEED 		(uint16_t)(0x0200)
 
 // Positions
-#define INITIAL_POSITION	(uint16_t)(0x0000)
-#define END_POSITION		(uint16_t)(0x0800)
+#define THTL_INITIAL_POSITION	(uint16_t)(0x0000)
+#define THTL_END_POSITION		(uint16_t)(0x0800)
+
+#define RESPONSE_BUFFER_SEIZE	(uint8_t)(0xFF)
 
 #include "Cpu.h"
 #include "Events.h"
@@ -32,7 +36,7 @@ LWEVENT_STRUCT lwevent_RS485;
 LWEVENT_STRUCT lwevent_setThrottle;
 uint8_t TxData[20];
 
-uint8_t response[128];
+uint8_t response[RESPONSE_BUFFER_SEIZE];
 
 /** 0% and 100% positions */
 uint16_t P0, P100;
@@ -53,13 +57,15 @@ uint8_t MX28R_Read(uint8_t StartAddr, uint8_t Length, LDD_TDeviceData *ptr);
 
 uint8_t MX28R_Write(uint8_t StartAddr, uint8_t Value[], uint8_t Length, LDD_TDeviceData *ptr);
 
+uint16_t MX28_read_byte(uint8_t StartAddr);
+
 uint8_t MX28R_check_moving(void);
+
+void MX28R_calibration(void);
 
 void MX28R_set_task(uint32_t task_init_data);
 
 void MX28R_check_task(uint32_t task_init_data);
-
-void MX28R_calibration(void);
 
 void MX28R_OnCharRcv();
 
