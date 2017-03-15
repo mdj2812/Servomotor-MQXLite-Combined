@@ -84,7 +84,8 @@ Sources/main.o: ../Sources/main.c \
  C:/Users/MA/EP\ Tender/Servomotor-MQXLite-Combined/Static_Code/PDD/USB_PDD.h \
  C:/Users/MA/EP\ Tender/Servomotor-MQXLite-Combined/Static_Code/PDD/VREF_PDD.h \
  C:/Users/MA/EP\ Tender/Servomotor-MQXLite-Combined/Static_Code/PDD/WDOG_PDD.h \
- C:/Users/MA/EP\ Tender/Servomotor-MQXLite-Combined/Generated_Code/Init_Config.h
+ C:/Users/MA/EP\ Tender/Servomotor-MQXLite-Combined/Generated_Code/Init_Config.h \
+ ../Sources/MX28R.h
 
 C:/Users/MA/EP\ Tender/Servomotor-MQXLite-Combined/Generated_Code/Cpu.h:
 
@@ -257,3 +258,5 @@ C:/Users/MA/EP\ Tender/Servomotor-MQXLite-Combined/Static_Code/PDD/VREF_PDD.h:
 C:/Users/MA/EP\ Tender/Servomotor-MQXLite-Combined/Static_Code/PDD/WDOG_PDD.h:
 
 C:/Users/MA/EP\ Tender/Servomotor-MQXLite-Combined/Generated_Code/Init_Config.h:
+
+../Sources/MX28R.h:
