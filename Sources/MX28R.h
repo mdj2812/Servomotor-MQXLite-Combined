@@ -25,19 +25,20 @@
 #define THTL_ADD_STEP                   2
 
 // Torque limit of the motor
-#define THTL_TORQUE_MAX 		(uint16_t)(0x0100)
+#define THTL_TORQUE_MAX 		(uint16_t)(0x0180)
+#define THTL_TORQUE_MIN 		(uint16_t)(0x0080)
 // Moving speed of the motor
 #define THTL_MOVING_SPEED 		(uint16_t)(0x0200)
 // Minimal moving speed of the motor
 #define THTL_SPEED_MIN	 		(uint16_t)(0x0070)
 
 // Positions
-#define THTL_CW_ANGLE_LIMIT		(uint16_t)(0x0000)
-#define THTL_CCW_ANGLE_LIMIT	(uint16_t)(0x0900)
-#define THTL_INITIAL_POSITION	(uint16_t)(0x0010)
-#define THTL_END_POSITION		(uint16_t)(0x0800)
+#define THTL_CW_ANGLE_LIMIT		(uint16_t)(0x0500)
+#define THTL_CCW_ANGLE_LIMIT	(uint16_t)(0x1000)
+#define THTL_INITIAL_POSITION	(uint16_t)(0x0600)
+#define THTL_END_POSITION		(uint16_t)(0x0900)
 
-#define RESPONSE_BUFFER_SEIZE	(uint8_t)(0xFF)
+#define RESPONSE_BUFFER_SEIZE	(uint8_t)(20)
 
 #define MX28R_TIMEOUT_ERROR		(int32_t)(-1)
 #define MX28R_LENGTH_ERROR		(int32_t)(-2)
@@ -63,6 +64,7 @@ int8_t thtlBuffer;
 /*******************************************************************************
  * Prototypes
  ******************************************************************************/
+/* In*/
 void thtlInit();
 
 void thtlGetChecksum(uint8_t* array);

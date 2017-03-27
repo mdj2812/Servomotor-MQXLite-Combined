@@ -32,40 +32,29 @@
         <Default_memory_for_interrupts v="INTERNAL RAM" />
         <Default_memory_for_code v="INTERNAL RAM" />
         <Default_memory_for_data v="INTERNAL RAM" />
-        <list name="ROM/RAM Areas" v="5">
+        <list name="ROM/RAM Areas" v="3">
           <group name="MemoryArea0">
             <boolgroup name="ROM/RAM Area" v="Enabled">
               <Name v="m_interrupts" />
               <Qualifier v="RX" />
-              <Address v="0" />
+              <Address v="536870912" />
               <Size v="408" />
             </boolgroup>
           </group>
           <group name="MemoryArea1">
-            <boolgroup name="ROM/RAM Area" v="Disabled" />
-          </group>
-          <group name="MemoryArea2">
             <boolgroup name="ROM/RAM Area" v="Enabled">
               <Name v="m_text" />
               <Qualifier v="RX" />
-              <Address v="1040" />
-              <Size v="1047536" />
+              <Address v="536871320" />
+              <Size v="196200" />
             </boolgroup>
           </group>
-          <group name="MemoryArea3">
-            <boolgroup name="ROM/RAM Area" v="Enabled">
-              <Name v="m_data_1FFF0000" />
-              <Qualifier v="RW" />
-              <Address v="536805376" />
-              <Size v="65536" />
-            </boolgroup>
-          </group>
-          <group name="MemoryArea4">
+          <group name="MemoryArea2">
             <boolgroup name="ROM/RAM Area" v="Enabled">
               <Name v="m_data" />
               <Qualifier v="RW" />
-              <Address v="536870912" />
-              <Size v="196608" />
+              <Address v="536805376" />
+              <Size v="65536" />
             </boolgroup>
           </group>
         </list>

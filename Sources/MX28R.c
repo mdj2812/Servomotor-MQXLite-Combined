@@ -139,11 +139,9 @@ uint16_t MX28R_get_position(void) {
 
 void MX28R_calibration(void) {
     uint16_t PP, speed;
-    /* Limit of the torque */
-    uint8_t alarm[]={(uint8_t)0x26};
-    /* Limit of the torque */
+    /* Minimum of the CW angle */
     uint8_t angleLimitCW[]={(uint8_t)THTL_CW_ANGLE_LIMIT, (uint8_t)(THTL_CW_ANGLE_LIMIT>>8)};
-    /* Limit of the torque */
+    /* Maximum of the CCW angle */
     uint8_t angleLimitCCW[]={(uint8_t)THTL_CCW_ANGLE_LIMIT, (uint8_t)(THTL_CCW_ANGLE_LIMIT>>8)};
     /* Limit of the torque */
     uint8_t torqueLimit[]={(uint8_t)THTL_TORQUE_MAX, (uint8_t)(THTL_TORQUE_MAX>>8)};
@@ -166,7 +164,7 @@ void MX28R_calibration(void) {
 	_lwevent_clear(&lwevent_setThrottle, 0x02);
 	/*=================================================================================*/
 
-	/**********************Set the torque limit and the moving speed********************/
+	/**********************Set the max torque limit and the moving speed********************/
 	/* Set the moving speed to the movingSpeed */
 	MX28R_Write(0x20, movingSpeed, 2, MX28R_RS485_Ptr);
 	_lwevent_wait_ticks(&lwevent_setThrottle, 0x02, FALSE, 10);
@@ -177,10 +175,28 @@ void MX28R_calibration(void) {
 	_lwevent_wait_ticks(&lwevent_setThrottle, 0x02, FALSE, 10);
 	_lwevent_clear(&lwevent_setThrottle, 0x02);
 
-	torqueLimit[0] = 0;
-	torqueLimit[1] = 0;
+	/* Try to go back to the THTL_INITIAL_POSITION */
+	thtlSetGoalPosition(THTL_INITIAL_POSITION, MX28R_RS485_Ptr);
+	_lwevent_wait_ticks(&lwevent_setThrottle, 0x02, FALSE, 10);
+	_lwevent_clear(&lwevent_setThrottle, 0x02);
 
-	PP = MX28R_get_position();
+	/* Wait till it stopped */
+	do {
+		/* Wait 10 ticks = 50 Ms */
+		_time_delay_ticks(10);
+
+		speed = MX28R_get_speed();
+	} while(speed);
+
+	/* Initialize the toqueLimit table */
+	torqueLimit[0] = (uint8_t)THTL_TORQUE_MIN;
+	torqueLimit[1] = (uint8_t)(THTL_TORQUE_MIN>>8);
+
+	/* Try to turn in CCW direction */
+	/* Set the position to END_POSITION */
+	thtlSetGoalPosition(THTL_END_POSITION, MX28R_RS485_Ptr);
+	_lwevent_wait_ticks(&lwevent_setThrottle, 0x02, FALSE, 10);
+	_lwevent_clear(&lwevent_setThrottle, 0x02);
 
 	do {
 		if(torqueLimit[0] >= 0xf0) {
@@ -189,11 +205,6 @@ void MX28R_calibration(void) {
 		} else {
 			torqueLimit[0]+=0x10;
 		}
-
-		/* Try to turn in CW direction */
-		thtlSetGoalPosition((PP>=0xc00)?(PP-0xc00):(PP+0x400), MX28R_RS485_Ptr);
-		_lwevent_wait_ticks(&lwevent_setThrottle, 0x02, FALSE, 10);
-		_lwevent_clear(&lwevent_setThrottle, 0x02);
 
 		/* Set the Torque Limit to the torqueLimit */
 		MX28R_Write(0x22, torqueLimit, 2, MX28R_RS485_Ptr);
@@ -204,7 +215,7 @@ void MX28R_calibration(void) {
 		_time_delay_ticks(10);
 
 		speed = MX28R_get_speed();
-	} while(((speed & ~0x400) < THTL_SPEED_MIN) && (((torqueLimit[0]) | (torqueLimit[1]<<8)) <= THTL_TORQUE_MAX));
+	} while(((speed & ~0x400) < THTL_SPEED_MIN) && (((torqueLimit[0]) | (torqueLimit[1]<<8)) < THTL_TORQUE_MAX));
 	/*=================================================================================*/
 
 	/***************************Get the 100% position***********************************/
@@ -214,11 +225,6 @@ void MX28R_calibration(void) {
 	//	table_PP_PL[i][1] = 0;
 	//}
 	//i = 0;
-
-	/* Set the position to END_POSITION */
-	thtlSetGoalPosition(THTL_END_POSITION, MX28R_RS485_Ptr);
-	_lwevent_wait_ticks(&lwevent_setThrottle, 0x02, FALSE, 10);
-	_lwevent_clear(&lwevent_setThrottle, 0x02);
 
 	/* Cycle till the end of the movement */
 	do{
@@ -323,7 +329,7 @@ void MX28R_set_task(uint32_t task_init_data) {
       }
       if (thtlNeedChange) {
         thtlNeedChange = FALSE;
-        thtlOrder = thtlBuffer ? P0 + thtlBuffer * (P100-P0) / 100 : P0;
+        thtlOrder = P0 + thtlBuffer * (P100-P0) / 100;
         thtlSetGoalPosition(thtlOrder, MX28R_RS485_Ptr);
         _lwevent_wait_ticks(&lwevent_RS485, 0x02, FALSE, 50);
         _lwevent_clear(&lwevent_RS485, 0x02);
